@@ -1,0 +1,11 @@
+.search-icons span i {
+  font-size: 20px;
+}
+.search-icons span i:hover {
+  color: #b68c5a;
+}
+
+.search-icons span i span {
+  font-size: 8px;
+  background-color: #b68c5a;
+}

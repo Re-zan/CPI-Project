@@ -1,0 +1,9 @@
+.mainnav .nav-link {
+  padding: 20px !important;
+  color: #414040 !important ;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.mainnav .nav-link:hover {
+  color: #b68c5a !important ;
+}

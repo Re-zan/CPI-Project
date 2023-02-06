@@ -1,0 +1,10 @@
+.shopcontent .btn_shopt {
+  background-color: #ffff;
+  border: 0;
+  padding-top: 10px;
+  font-weight: 600;
+  color: #b68c5a;
+}
+.shopcontent .btn_shopt:hover {
+  color: #3153e9;
+}

@@ -13,7 +13,7 @@ export default function DealPrat() {
             <img className="d-block w-100" src={homeimg1} alt="First slide" />
           </Col>
           <Col sm={1} md={6}>
-            <div className="content mt-md-5  mt-sm-3 m">
+            <div className="content mt-5 pt-5 px-2">
               <i class="fa-solid fa-star text-warning"></i>
               <i class="fa-solid fa-star text-warning"></i>
               <i class="fa-solid fa-star text-warning"></i>
@@ -40,7 +40,7 @@ export default function DealPrat() {
               </div>
               <p className="fw-semibold">HURRY UP! OFFER ENDS IN:</p>
 
-              <div className="d-flex sm-flex-column md-flex-row gap-4 text-center">
+              <div className="d-flex flex-md-row flex-sm-column gap-4 text-center">
                 <div className="bg-body-secondary border rounded p-3">
                   <p className="fs-4 text-black fw-semibold">360</p>
                   <p className="fs-6 text-body-secondary">Days</p>

@@ -86,7 +86,7 @@ export default function OurRecentPro() {
                 <button className="btn_pro px-3 py-2">
                   {" "}
                   Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
+                  <i className="fa-solid fa-angles-right ms-2 "></i>
                 </button>
               </div>
             </Col>

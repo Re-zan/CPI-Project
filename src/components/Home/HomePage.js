@@ -10,6 +10,9 @@ import Topsearch from "../Topsearchbar/Topsearch";
 import NewPro from "../NewPro/NewPro";
 import DealPrat from "../DealPart/DealPrat";
 import Paralex from "../Paralex/Paralex";
+import BeThe from "../BeThe/BeThe";
+import Testominal from "../Testominal/Testominal";
+import FooterPart from "../Footer/FooterPart";
 
 export default function HomePage() {
   return (
@@ -30,6 +33,9 @@ export default function HomePage() {
       <Heading />
       <Paralex />
       <OurRecentPro />
+      <Testominal />
+      <BeThe />
+      <FooterPart />
     </>
   );
 }

@@ -6,6 +6,7 @@ import "./OurPro.css";
 import product1 from "./images/product-5.webp";
 import product2 from "./images/product-2.webp";
 import product3 from "./images/product-3.webp";
+import ButtonPart from "../CommonUtilti/Button/ButtonPart";
 
 export default function OurRecentPro() {
   return (
@@ -14,17 +15,14 @@ export default function OurRecentPro() {
         <Carousel.Item>
           <Row>
             <Col>
-              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
+              <div className=" border border-dark-subtle rounded bg-body-tertiary ">
                 <img
                   className="d-block w-100"
                   src={product1}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+
+                <ButtonPart />
               </div>
             </Col>
 
@@ -35,11 +33,7 @@ export default function OurRecentPro() {
                   src={product2}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
             <Col>
@@ -49,11 +43,7 @@ export default function OurRecentPro() {
                   src={product3}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
           </Row>
@@ -68,11 +58,7 @@ export default function OurRecentPro() {
                   src={product1}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
 
@@ -83,11 +69,7 @@ export default function OurRecentPro() {
                   src={product2}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2 "></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
             <Col>
@@ -97,11 +79,7 @@ export default function OurRecentPro() {
                   src={product3}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
           </Row>
@@ -116,11 +94,7 @@ export default function OurRecentPro() {
                   src={product1}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
 
@@ -131,11 +105,7 @@ export default function OurRecentPro() {
                   src={product2}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
             <Col>
@@ -145,11 +115,7 @@ export default function OurRecentPro() {
                   src={product3}
                   alt="Third slide"
                 />
-                <button className="btn_pro px-3 py-2">
-                  {" "}
-                  Details
-                  <i className="fa-solid fa-angles-right ms-2"></i>
-                </button>
+                <ButtonPart />
               </div>
             </Col>
           </Row>

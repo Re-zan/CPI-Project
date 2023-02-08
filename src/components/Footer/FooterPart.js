@@ -18,11 +18,21 @@ export default function FooterPart() {
               <div className="border-bottom border-warning w-25"></div>
 
               <ul>
-                <li>gfg</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
               </ul>
             </Col>
 
@@ -31,11 +41,21 @@ export default function FooterPart() {
               <div className="border-bottom border-warning w-25"></div>
 
               <ul>
-                <li>gfg</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
               </ul>
             </Col>
 
@@ -44,11 +64,21 @@ export default function FooterPart() {
               <div className="border-bottom border-warning w-25"></div>
 
               <ul>
-                <li>gfg</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
-                <li>Fashion</li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
+                <li>
+                  <a href="#dg">Fashion</a>{" "}
+                </li>
               </ul>
             </Col>
 

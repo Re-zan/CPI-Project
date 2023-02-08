@@ -6,6 +6,7 @@ import "./NewPro.css";
 import image1 from "./images/jacket-1.jpg";
 import image2 from "./images/jacket-2.jpg";
 import image3 from "./images/jacket-3.jpg";
+import ButtonPart from "../CommonUtilti/Button/ButtonPart";
 
 export default function NewPro() {
   return (
@@ -33,6 +34,7 @@ export default function NewPro() {
                     $200.00
                   </del>
                 </p>
+                <ButtonPart />
               </div>
               <div className="overlay ">
                 <p className="border border-secondary-subtle rounded p-1">
@@ -71,6 +73,7 @@ export default function NewPro() {
                     $200.00
                   </del>
                 </p>
+                <ButtonPart />
               </div>
               <div className="overlay ">
                 <p className="border border-secondary-subtle rounded p-1">
@@ -109,6 +112,7 @@ export default function NewPro() {
                     $200.00
                   </del>
                 </p>
+                <ButtonPart />
               </div>
               <div className="overlay ">
                 <p className="border border-secondary-subtle rounded p-1">
@@ -147,6 +151,7 @@ export default function NewPro() {
                     $200.00
                   </del>
                 </p>
+                <ButtonPart />
               </div>
               <div className="overlay ">
                 <p className="border border-secondary-subtle rounded p-1">
@@ -185,6 +190,8 @@ export default function NewPro() {
                     $200.00
                   </del>
                 </p>
+
+                <ButtonPart />
               </div>
               <div className="overlay ">
                 <p className="border border-secondary-subtle rounded p-1">

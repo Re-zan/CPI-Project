@@ -1,9 +1,7 @@
-a {
-  text-decoration: none;
-}
-.ssd {
+.parallax_part {
   min-height: 500px;
-  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -1,3 +1,10 @@
+a {
+  text-decoration: none;
+}
+.search a {
+  color: black;
+}
+
 .search-icons span i {
   font-size: 20px;
 }

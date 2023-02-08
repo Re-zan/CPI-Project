@@ -11,13 +11,14 @@ import img3 from "./images/blog-1.jpg";
 import img4 from "./images/blog-2.jpg";
 import img5 from "./images/blog-3.jpg";
 import img6 from "./images/blog-4.jpg";
+import ButtonPart from "../CommonUtilti/Button/ButtonPart";
 
 export default function Testominal() {
   return (
     <div>
       <Container>
-        <Row className="py-5">
-          <Col>
+        <Row className="py-5 gy-4">
+          <Col sm={1} md={3}>
             <h3 className="fs-5 text ">Testimonial</h3>
             <hr className="border border-dark-subtle h-0"></hr>
 
@@ -36,20 +37,23 @@ export default function Testominal() {
               </p>
             </div>
           </Col>
-          <Col xs={6}>
-            <div className="ssd">
-              <img
-                className="d-block w-100 rounded"
-                src={img2}
-                alt="First slide"
-              />
-              <div className="overlay bg-primary">
-                <Button variant="dark">Dark</Button>
-                <h2>Summer collection</h2>
+          <Col sm={1} md={6}>
+            <div
+              className="ssd d-flex justify-content-center broder rounded align-items-center "
+              style={{ backgroundImage: `url(${img2})` }}
+            >
+              <div className="text-center bg-white p-5 border rounded border-0 opacity-75">
+                <Button variant="dark">25% Discount</Button>
+                <a href="#fhf">
+                  <h5 className="text-dark pt-2">Summer collection</h5>
+                </a>
+                <a href="#fhf" className="text-light-emphasis">
+                  SHOP NOW
+                </a>
               </div>
             </div>
           </Col>
-          <Col>
+          <Col sm={1} md={3}>
             <h3 className="fs-5 text ">Testimonial</h3>
             <hr className="border border-dark-subtle h-0"></hr>
 
@@ -86,6 +90,8 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
+
+                  <ButtonPart />
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -106,6 +112,7 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
+                  <ButtonPart />
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -126,6 +133,7 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
+                  <ButtonPart />
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -146,6 +154,7 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
+                  <ButtonPart />
                 </Card.Text>
               </Card.Body>
             </Card>

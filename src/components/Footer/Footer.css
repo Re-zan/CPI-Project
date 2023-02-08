@@ -1,12 +1,22 @@
+ul,
+li {
+  padding: 0;
+}
 .footer ul li {
   list-style: none;
-  color: rgb(166, 166, 167);
   margin-top: 10px;
+}
+.footer ul li a {
+  list-style: none;
+  color: rgb(166, 166, 167);
   padding-top: 6px;
+  padding-left: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.footer ul li:hover {
+.footer ul li a:hover {
   color: #c39f57;
+  padding-left: 5px;
 }
 .contact p {
   margin-top: 18px;

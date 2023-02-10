@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Stack from "react-bootstrap/Stack";
+import { NavLink } from "react-router-dom";
 import "./Topsearch.css";
 
 export default function Topsearch() {
@@ -12,9 +13,9 @@ export default function Topsearch() {
           <Stack direction="horizontal" gap={3} className="my-4">
             <div className="mx-auto w-100 position-relative search">
               <Form.Control placeholder="Search Items" />{" "}
-              <a href="#gdf" className="me-3  position-absolute top-0 end-0">
+              <NavLink to="#" className="me-3  position-absolute top-0 end-0">
                 <i class="fa-solid fa-magnifying-glass pt-2"></i>
-              </a>
+              </NavLink>
             </div>
 
             <div className="search-icons d-flex">

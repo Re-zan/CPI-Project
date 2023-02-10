@@ -4,6 +4,8 @@ import "./App.css";
 import AboutPage from "./pages/AboutUs/AboutPage";
 import BlogPage from "./pages/Blog/BlogPage";
 import SingleBlogPart from "./pages/SingleBlog/SingleBlogPart";
+import Shop from "./pages/Shop/Shop";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -11,8 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/about" element={<AboutPage />}></Route>
+        <Route path="/shop" element={<Shop />}></Route>
         <Route path="/blog" element={<BlogPage />}></Route>
         <Route path="/singleblog" element={<SingleBlogPart />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -15,13 +15,12 @@ export default function OurRecentPro() {
         <Carousel.Item>
           <Row>
             <Col>
-              <div className=" border border-dark-subtle rounded bg-body-tertiary ">
+              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
                 <img
                   className="d-block w-100"
                   src={product1}
                   alt="Third slide"
                 />
-
                 <ButtonPart />
               </div>
             </Col>

@@ -40,7 +40,7 @@ export default function DealPrat() {
               </div>
               <p className="fw-semibold">HURRY UP! OFFER ENDS IN:</p>
 
-              <div className="d-flex flex-md-row flex-sm-column gap-4 text-center">
+              <div className="d-flex flex-md-row flex-sm-column gap-3 text-center">
                 <div className="bg-body-secondary border rounded p-3">
                   <p className="fs-4 text-black fw-semibold">360</p>
                   <p className="fs-6 text-body-secondary">Days</p>

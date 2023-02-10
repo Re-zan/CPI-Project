@@ -3,87 +3,85 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./Footer.css";
+import logoimg from "./images/Logo.png";
 import footerimg from "./images/payment.png";
+import { NavLink } from "react-router-dom";
 
 export default function FooterPart() {
   return (
     <div>
       <div className="bg-dark footer">
         <Container>
-          <Row className="py-5">
+          <Row className="py-5 ">
             <Col sm={1} md={3}>
-              <h4 className="fs-6 text fw-bold text-white">
-                POPULAR CATEGORIES
+              <div className="d-flex justify-content-center my-3 logo">
+                <NavLink to="/">
+                  <img alt="logo " src={logoimg} />
+                </NavLink>
+              </div>
+
+              <div className="contact">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+              </div>
+            </Col>
+
+            <Col sm={1} md={3}>
+              <h4 className="fs-6 text fw-bold text-white ms-4 mt-5">
+                Useful Links
               </h4>
-              <div className="border-bottom border-warning w-25"></div>
+              <div className="border-bottom border-warning w-25 ms-4"></div>
+              <div className="ms-4">
+                <NavLink to="/" className="footer_mainnav">
+                  Home
+                </NavLink>
+                <NavLink to="/about" className="footer_mainnav">
+                  About Us
+                </NavLink>
+                <NavLink to="/shop" className="footer_mainnav">
+                  Shop
+                </NavLink>
+                <NavLink to="/blog" className="footer_mainnav">
+                  BLog
+                </NavLink>
 
-              <ul>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-              </ul>
+                <NavLink to="/contact" className="footer_mainnav">
+                  Contact US
+                </NavLink>
+              </div>
             </Col>
 
             <Col sm={1} md={3}>
-              <h4 className="fs-6 text fw-bold text-white">PRODUCTS</h4>
-              <div className="border-bottom border-warning w-25"></div>
+              <h4 className="fs-6 text fw-bold text-white ms-4 mt-5">
+                Categories
+              </h4>
+              <div className="border-bottom border-warning w-25 ms-4"></div>
+              <div className="ms-4">
+                <NavLink to="/singleblog" className="footer_mainnav">
+                  Fashion
+                </NavLink>
+                <NavLink to="/singleblog" className="footer_mainnav">
+                  Lifestyle
+                </NavLink>
+                <NavLink to="/singleblog" className="footer_mainnav">
+                  Trend
+                </NavLink>
+                <NavLink to="/singleblog" className="footer_mainnav">
+                  Popular
+                </NavLink>
 
-              <ul>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-              </ul>
+                <NavLink to="/singleblog" className="footer_mainnav">
+                  Womens
+                </NavLink>
+              </div>
             </Col>
 
             <Col sm={1} md={3}>
-              <h4 className="fs-6 text fw-bold text-white">OUR COMPANY</h4>
-              <div className="border-bottom border-warning w-25"></div>
-
-              <ul>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-                <li>
-                  <a href="#dg">Fashion</a>{" "}
-                </li>
-              </ul>
-            </Col>
-
-            <Col sm={1} md={3}>
-              <h4 className="fs-6 text fw-bold text-white">CONTACT</h4>
+              <h4 className="fs-6 text fw-bold text-white mt-5">CONTACT</h4>
               <div className="border-bottom border-warning w-25"></div>
               <div className="contact">
                 <p>

@@ -11,8 +11,8 @@ import img3 from "./images/blog-1.jpg";
 import img4 from "./images/blog-2.jpg";
 import img5 from "./images/blog-3.jpg";
 import img6 from "./images/blog-4.jpg";
+import { NavLink } from "react-router-dom";
 import ButtonPart from "../CommonUtilti/Button/ButtonPart";
-
 export default function Testominal() {
   return (
     <div>
@@ -90,8 +90,9 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
-
-                  <ButtonPart />
+                  <NavLink to="/singleblog" className="btn-pro">
+                    <ButtonPart />
+                  </NavLink>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -112,7 +113,9 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
-                  <ButtonPart />
+                  <NavLink to="/singleblog" className="btn-pro">
+                    <ButtonPart />
+                  </NavLink>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -133,7 +136,10 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
-                  <ButtonPart />
+
+                  <NavLink to="/singleblog" className="btn-pro">
+                    <ButtonPart />
+                  </NavLink>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -154,7 +160,9 @@ export default function Testominal() {
                   <p className="fs-6 text text-dark-emphasis">
                     By Mr Admin / Apr 06, 2022
                   </p>
-                  <ButtonPart />
+                  <NavLink to="/singleblog" className="btn-pro">
+                    <ButtonPart />
+                  </NavLink>
                 </Card.Text>
               </Card.Body>
             </Card>

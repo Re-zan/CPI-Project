@@ -115,7 +115,9 @@ export default function BlogParts() {
                         By Mr Admin / Apr 06, 2022
                       </p>
 
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -136,7 +138,9 @@ export default function BlogParts() {
                       <p className="fs-6 text text-dark-emphasis">
                         By Mr Admin / Apr 06, 2022
                       </p>
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -157,7 +161,9 @@ export default function BlogParts() {
                       <p className="fs-6 text text-dark-emphasis">
                         By Mr Admin / Apr 06, 2022
                       </p>
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -178,7 +184,9 @@ export default function BlogParts() {
                       <p className="fs-6 text text-dark-emphasis">
                         By Mr Admin / Apr 06, 2022
                       </p>
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -204,7 +212,9 @@ export default function BlogParts() {
                         By Mr Admin / Apr 06, 2022
                       </p>
 
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -225,7 +235,9 @@ export default function BlogParts() {
                       <p className="fs-6 text text-dark-emphasis">
                         By Mr Admin / Apr 06, 2022
                       </p>
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -246,7 +258,9 @@ export default function BlogParts() {
                       <p className="fs-6 text text-dark-emphasis">
                         By Mr Admin / Apr 06, 2022
                       </p>
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -267,7 +281,9 @@ export default function BlogParts() {
                       <p className="fs-6 text text-dark-emphasis">
                         By Mr Admin / Apr 06, 2022
                       </p>
-                      <ButtonPart />
+                      <NavLink to="/singleblog" className="btn-pro">
+                        <ButtonPart />
+                      </NavLink>
                     </Card.Text>
                   </Card.Body>
                 </Card>

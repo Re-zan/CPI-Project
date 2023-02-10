@@ -7,6 +7,7 @@ import product1 from "./images/product-5.webp";
 import product2 from "./images/product-2.webp";
 import product3 from "./images/product-3.webp";
 import ButtonPart from "../CommonUtilti/Button/ButtonPart";
+import { NavLink } from "react-router-dom";
 
 export default function OurRecentPro() {
   return (
@@ -21,7 +22,9 @@ export default function OurRecentPro() {
                   src={product1}
                   alt="Third slide"
                 />
-                <ButtonPart />
+                <NavLink to="/singleblog" className="btn-pro">
+                  <ButtonPart />
+                </NavLink>
               </div>
             </Col>
 
@@ -32,7 +35,9 @@ export default function OurRecentPro() {
                   src={product2}
                   alt="Third slide"
                 />
-                <ButtonPart />
+                <NavLink to="/singleblog" className="btn-pro">
+                  <ButtonPart />
+                </NavLink>
               </div>
             </Col>
             <Col>
@@ -42,7 +47,9 @@ export default function OurRecentPro() {
                   src={product3}
                   alt="Third slide"
                 />
-                <ButtonPart />
+                <NavLink to="/singleblog" className="btn-pro">
+                  <ButtonPart />
+                </NavLink>
               </div>
             </Col>
           </Row>
@@ -57,7 +64,9 @@ export default function OurRecentPro() {
                   src={product1}
                   alt="Third slide"
                 />
-                <ButtonPart />
+                <NavLink to="/singleblog" className="btn-pro">
+                  <ButtonPart />
+                </NavLink>
               </div>
             </Col>
 

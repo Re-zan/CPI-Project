@@ -7,13 +7,37 @@ import Card from "react-bootstrap/Card";
 import "./Testimoinal.css";
 import img1 from "./images/testimonial-1.jpg";
 import img2 from "./images/cta-banner.jpg";
-import img3 from "./images/blog-1.jpg";
-import img4 from "./images/blog-2.jpg";
-import img5 from "./images/blog-3.jpg";
-import img6 from "./images/blog-4.jpg";
+
 import { NavLink } from "react-router-dom";
 import ButtonPart from "../CommonUtilti/Button/ButtonPart";
+import blogDatas from "../../data/blogdata";
 export default function Testominal() {
+  const BlogCard = () => {
+    return blogDatas.map((items) => {
+      return (
+        <Col>
+          <Card>
+            <Card.Img variant="top" src={items.image} className="w-100" />
+            <Card.Body>
+              <Card.Title className="fs-5 text text-warning-emphasis">
+                {items.categories}
+              </Card.Title>
+              <Card.Text>
+                <p className="text-dark"> {items.title}</p>
+                <p className="fs-6 text text-dark-emphasis">
+                  {items.author} / {items.date}
+                </p>
+                <NavLink to="/singleblog" className="btn-pro">
+                  <ButtonPart />
+                </NavLink>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      );
+    });
+  };
+
   return (
     <div>
       <Container>
@@ -75,98 +99,7 @@ export default function Testominal() {
         </Row>
 
         <Row xs={1} md={4} sm={1} className="g-4">
-          <Col>
-            <Card>
-              <Card.Img variant="top" src={img3} />
-              <Card.Body>
-                <Card.Title className="fs-5 text text-warning-emphasis">
-                  Fashion
-                </Card.Title>
-                <Card.Text>
-                  <p className="text-dark">
-                    {" "}
-                    Clothes Retail KPIs 2021 Guide for Clothes Executives.
-                  </p>
-                  <p className="fs-6 text text-dark-emphasis">
-                    By Mr Admin / Apr 06, 2022
-                  </p>
-                  <NavLink to="/singleblog" className="btn-pro">
-                    <ButtonPart />
-                  </NavLink>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card>
-              <Card.Img variant="top" src={img4} />
-              <Card.Body>
-                <Card.Title className="fs-5 text text-warning-emphasis">
-                  Fashion
-                </Card.Title>
-                <Card.Text>
-                  <p className="text-dark">
-                    {" "}
-                    Clothes Retail KPIs 2021 Guide for Clothes Executives.
-                  </p>
-                  <p className="fs-6 text text-dark-emphasis">
-                    By Mr Admin / Apr 06, 2022
-                  </p>
-                  <NavLink to="/singleblog" className="btn-pro">
-                    <ButtonPart />
-                  </NavLink>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card>
-              <Card.Img variant="top" src={img5} />
-              <Card.Body>
-                <Card.Title className="fs-5 text text-warning-emphasis">
-                  Fashion
-                </Card.Title>
-                <Card.Text>
-                  <p className="text-dark">
-                    {" "}
-                    Clothes Retail KPIs 2021 Guide for Clothes Executives.
-                  </p>
-                  <p className="fs-6 text text-dark-emphasis">
-                    By Mr Admin / Apr 06, 2022
-                  </p>
-
-                  <NavLink to="/singleblog" className="btn-pro">
-                    <ButtonPart />
-                  </NavLink>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card>
-              <Card.Img variant="top" src={img6} />
-              <Card.Body>
-                <Card.Title className="fs-5 text text-warning-emphasis">
-                  Fashion
-                </Card.Title>
-                <Card.Text>
-                  <p className="text-dark">
-                    {" "}
-                    Clothes Retail KPIs 2021 Guide for Clothes Executives.
-                  </p>
-                  <p className="fs-6 text text-dark-emphasis">
-                    By Mr Admin / Apr 06, 2022
-                  </p>
-                  <NavLink to="/singleblog" className="btn-pro">
-                    <ButtonPart />
-                  </NavLink>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <BlogCard />
         </Row>
       </Container>
     </div>

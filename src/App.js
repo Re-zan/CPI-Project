@@ -6,6 +6,8 @@ import BlogPage from "./pages/Blog/BlogPage";
 import SingleBlogPart from "./pages/SingleBlog/SingleBlogPart";
 import Shop from "./pages/Shop/Shop";
 import Contact from "./pages/Contact/Contact";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/blog" element={<BlogPage />}></Route>
         <Route path="/singleblog" element={<SingleBlogPart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Contact.css";
@@ -17,37 +17,61 @@ export default function ContacParts() {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <Container>
-        <div className=" my-5">
-          <h2>Contact US</h2>
-          <div className="my-3 mx-auto">
-            <Form>
-              <Form.Group className="mb-3 ">
-                <Form.Control
-                  placeholder="Name*"
-                  className="bg-body-secondary rounded-0 py-3 px-4"
-                />
-              </Form.Group>
-              <Form.Group className="mb-3 ">
-                <Form.Control
-                  placeholder="Email*"
-                  className="bg-body-secondary rounded-0 py-3 px-4"
-                />
-              </Form.Group>
-              <Form.Group className="mb-3 ">
-                <Form.Control
-                  as="textarea"
-                  placeholder="Comments*"
-                  rows={4}
-                  className="bg-body-secondary rounded-0 py-3 px-4"
-                />
-              </Form.Group>
-              <Button variant="dark" className="b p-3">
-                Add Your Review
-              </Button>
-            </Form>
-          </div>
-        </div>
+      <Container className="my-5 pb-5">
+        <Row>
+          <Col sm={1} md={7}>
+            <div className=" my-5">
+              <h2>Get In Touch</h2>
+              <div className="my-3 mx-auto">
+                <Form>
+                  <Form.Group className="mb-3 ">
+                    <Form.Control
+                      placeholder="Name*"
+                      className="bg-body-secondary rounded-0 py-3 px-4"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3 ">
+                    <Form.Control
+                      placeholder="Email*"
+                      className="bg-body-secondary rounded-0 py-3 px-4"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3 ">
+                    <Form.Control
+                      placeholder="Subject*"
+                      className="bg-body-secondary rounded-0 py-3 px-4"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3 ">
+                    <Form.Control
+                      as="textarea"
+                      placeholder="Comments*"
+                      rows={4}
+                      className="bg-body-secondary rounded-0 py-3 px-4"
+                    />
+                  </Form.Group>
+                  <Button variant="dark" className="b p-3">
+                    Add Your Review
+                  </Button>
+                </Form>
+              </div>
+            </div>
+          </Col>
+
+          <Col sm={1} md={5}>
+            <p className=" my-5 pt-5">
+              Love it, or leave it. snap into a slim jim! hangman yeah! the mad
+              ness is runnin’ wild! hangman freak out! freak out! hangman and
+              your neck could be broken! bonesaw’s ready! diamond dallas page
+              vertical suplex oooooh yeeeah!
+            </p>
+            <h5>Address:</h5>
+            <p className="border-bottom pb-4">Chittagong, 2 no gate</p>
+            <h5>Contact info:</h5>
+            <p>Email: aaaad@gmail.com</p>
+            <p className="border-bottom pb-4">Tel: 01812144345</p>
+          </Col>
+        </Row>
       </Container>
     </div>
   );

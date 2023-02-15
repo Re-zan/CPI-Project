@@ -4,7 +4,14 @@
   font-size: 18px;
 }
 
-.contactnum:hover span,
+.contactnum {
+  font-size: 20px;
+  padding: 0 5px;
+  color: #414040 !important;
+}
+.contactnum:hover {
+  color: #b68c5a;
+}
 .contactemail:hover span {
   color: #b68c5a;
 }

@@ -18,11 +18,11 @@ export default function OurRecentPro() {
             <Col>
               <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
                 <img
-                  className="d-block w-100"
+                  className="d-block w-100 "
                   src={product1}
                   alt="Third slide"
                 />
-                <NavLink to="/singleblog" className="btn-pro">
+                <NavLink to="/singleblog">
                   <ButtonPart />
                 </NavLink>
               </div>

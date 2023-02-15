@@ -8,9 +8,15 @@ import Form from "react-bootstrap/Form";
 import img3 from "./images/blog-1.jpg";
 import img4 from "./images/blog-2.jpg";
 import img1 from "./images/testimonial-1.jpg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import blogDatas from "../../data/blogdata";
 
 export default function BLogSinglePart() {
+  const { id } = useParams();
+  let n_data = blogDatas.filter((cur_post) => {
+    return cur_post.id == id;
+  });
+
   return (
     <div>
       <Container>

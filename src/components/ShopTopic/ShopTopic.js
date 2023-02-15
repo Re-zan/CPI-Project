@@ -7,6 +7,7 @@ import img1 from "./imges/1.jpg";
 import img2 from "./imges/2.jpg";
 import img3 from "./imges/3.jpg";
 import img4 from "./imges/4.jpg";
+import { NavLink } from "react-router-dom";
 
 export default function ShopTopic() {
   return (
@@ -26,7 +27,9 @@ export default function ShopTopic() {
                   <h4 className="fs-6 text me-5 fw-semibold">DRESS & FROCK</h4>
                   <span className="fs-6 text">[53]</span>
                 </div>
-                <button className="btn_shopt">Show ALL</button>
+                <NavLink to="/shop">
+                  <button className="btn_shopt">Show ALL</button>
+                </NavLink>
               </div>
             </div>
           </Col>
@@ -44,7 +47,9 @@ export default function ShopTopic() {
                   <h4 className="fs-6 text me-5 fw-semibold">DRESS & FROCK</h4>
                   <span className="fs-6 text">[53]</span>
                 </div>
-                <button className="btn_shopt">Show ALL</button>
+                <NavLink to="/shop">
+                  <button className="btn_shopt">Show ALL</button>
+                </NavLink>
               </div>
             </div>
           </Col>
@@ -62,7 +67,9 @@ export default function ShopTopic() {
                   <h4 className="fs-6 text me-5 fw-semibold">DRESS & FROCK</h4>
                   <span className="fs-6 text">[53]</span>
                 </div>
-                <button className="btn_shopt">Show ALL</button>
+                <NavLink to="/shop">
+                  <button className="btn_shopt">Show ALL</button>
+                </NavLink>
               </div>
             </div>
           </Col>
@@ -80,7 +87,9 @@ export default function ShopTopic() {
                   <h4 className="fs-6 text me-5 fw-semibold">DRESS & FROCK</h4>
                   <span className="fs-6 text">[53]</span>
                 </div>
-                <button className="btn_shopt">Show ALL</button>
+                <NavLink to="/shop">
+                  <button className="btn_shopt">Show ALL</button>
+                </NavLink>
               </div>
             </div>
           </Col>

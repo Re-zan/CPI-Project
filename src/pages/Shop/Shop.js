@@ -3,11 +3,10 @@ import Heading from "../../components/Heading/Heading";
 import LogoPart from "../../components/Logo/LogoPart";
 import Mainnavbarpart from "../../components/Mainnavbar/Mainnavbarpart";
 import OurRecentPro from "../../components/OurRecentPro/OurRecentPro";
-import SliderPart from "../../components/Slider/SliderPart";
 import TopMenu from "../../components/Topmenubar/TopMenu";
 import Topsearch from "../../components/Topsearchbar/Topsearch";
-import NewPro from "../../components/NewPro/NewPro";
 import FooterPart from "../../components/Footer/FooterPart";
+import ShopPage from "../../components/ShopPage/ShopPage";
 export default function Shop() {
   return (
     <div>
@@ -15,9 +14,8 @@ export default function Shop() {
       <LogoPart />
       <Topsearch />
       <Mainnavbarpart />
-      <SliderPart />
-      <Heading title="All Products" />
-      <NewPro />
+      <ShopPage />
+
       <Heading title="Related Products" />
       <OurRecentPro />
 

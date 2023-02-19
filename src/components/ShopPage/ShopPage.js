@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
@@ -12,10 +12,27 @@ import ButtonPart from "../CommonUtilti/Button/ButtonPart";
 import productdata from "../../data/productdata";
 
 export default function ShopPage() {
-  function ShopCart(props) {
 
-  console.log(props.category)
-    return productdata.map((item) => {
+  const [product, setProduct] = useState(productdata);
+
+  const [cart, setCart] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+  const addToCart = (data) => {
+    setCart([...cart, { ...data, quantity: 1 }]);
+    localStorage.setItem('productItems', JSON.stringify(cart));
+  };
+
+  const handleShow = (value) => {
+    setShowCart(value);
+  };
+
+  const updateCartLen = (value) => {
+    setCart(value);
+  };
+
+  function ShopCart(props) {
+    return product.map((item) => {
       if (item["categories"] === props.category) {
         return (
           <>
@@ -103,7 +120,7 @@ export default function ShopPage() {
           </Tab>
           <Tab eventKey="profile" title="Hodie">
             <Row className="gy-3">
-            <ShopCart category="Hodies" />
+              <ShopCart category="Hodies" />
             </Row>
           </Tab>
           <Tab eventKey="contact" title="Tops">

@@ -17,7 +17,7 @@ function App() {
         <Route path="/about" element={<AboutPage />}></Route>
         <Route path="/shop" element={<Shop />}></Route>
         <Route path="/blog" element={<BlogPage />}></Route>
-        <Route path="/singleblog" element={<SingleBlogPart />}></Route>
+        <Route path="/singleblog/:id" element={<SingleBlogPart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

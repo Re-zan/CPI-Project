@@ -27,7 +27,7 @@ export default function Testominal() {
                 <p className="fs-6 text text-dark-emphasis">
                   {items.author} / {items.date}
                 </p>
-                <NavLink to="/singleblog" className="btn-pro">
+                <NavLink to={`/singleblog/${items.id}`} className="btn-pro">
                   <ButtonPart />
                 </NavLink>
               </Card.Text>

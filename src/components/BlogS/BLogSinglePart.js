@@ -24,30 +24,17 @@ export default function BLogSinglePart() {
         <Row>
           <Col>
             <div className=" my-5">
-              <h2 className="fs-3 text text-center">
-                Clothes Retail KPIs 2021 Guide for Clothes Executives.
-                <Igg />
-              </h2>
+              <h2 className="fs-3 text text-center">{n_data[0].title}</h2>
               <p className="fs-6 text text-dark-emphasis pt-3 text-center">
-                By Mr Admin / Apr 06, 2022
+                By {n_data[0].author} / {n_data[0].date}
               </p>
-              <img className="d-block w-100" src={img3} alt="First slide" />
+              <img
+                className="d-block w-100"
+                src={n_data[0].image}
+                alt="First slide"
+              />
               <div className="my-3 w-75 mx-auto ">
-                <p className="text-center">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable. If you are going to use a passage of
-                  Lorem Ipsum, you need to be sure there isn't anything
-                  embarrassing hidden in the middle of text. All the Lorem Ipsum
-                  generators on the Internet tend to repeat predefined chunks as
-                  necessary, making this the first true generator on the
-                  Internet. It uses a dictionary of over 200 Latin words,
-                  combined with a handful of model sentence structures, to
-                  generate Lorem Ipsum which looks reasonable. The generated
-                  Lorem Ipsum is therefore always free from repetition, injected
-                  humour, or non-characteristic words etc.
-                </p>
+                <p className="text-center">{n_data[0].description}</p>
                 <img
                   className="d-block w-100 my-4"
                   src={img4}

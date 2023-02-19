@@ -6,7 +6,8 @@ import OurRecentPro from "../../components/OurRecentPro/OurRecentPro";
 import TopMenu from "../../components/Topmenubar/TopMenu";
 import Topsearch from "../../components/Topsearchbar/Topsearch";
 import FooterPart from "../../components/Footer/FooterPart";
-import ShopPage from "../../components/ShopPage/ShopPage";
+import ShopPage from "../../components/Shop/ShopPage";
+
 export default function Shop() {
   return (
     <div>
@@ -15,7 +16,6 @@ export default function Shop() {
       <Topsearch />
       <Mainnavbarpart />
       <ShopPage />
-
       <Heading title="Related Products" />
       <OurRecentPro />
 

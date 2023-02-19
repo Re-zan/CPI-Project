@@ -6,8 +6,19 @@ import "./Footer.css";
 import logoimg from "./images/Logo.png";
 import footerimg from "./images/payment.png";
 import { NavLink } from "react-router-dom";
+import blogDatas from "../../data/blogdata";
 
 export default function FooterPart() {
+  const CategoryCard = () => {
+    return blogDatas.map((items) => {
+      return (
+        <NavLink to={`/singleblog/${items.id}`} className="footer_mainnav">
+          {" "}
+          {items.categories}
+        </NavLink>
+      );
+    });
+  };
   return (
     <div>
       <div className="bg-dark footer">
@@ -61,22 +72,7 @@ export default function FooterPart() {
               </h4>
               <div className="border-bottom border-warning w-25 ms-4"></div>
               <div className="ms-4">
-                <NavLink to="/singleblog" className="footer_mainnav">
-                  Fashion
-                </NavLink>
-                <NavLink to="/singleblog" className="footer_mainnav">
-                  Lifestyle
-                </NavLink>
-                <NavLink to="/singleblog" className="footer_mainnav">
-                  Trend
-                </NavLink>
-                <NavLink to="/singleblog" className="footer_mainnav">
-                  Popular
-                </NavLink>
-
-                <NavLink to="/singleblog" className="footer_mainnav">
-                  Womens
-                </NavLink>
+                <CategoryCard />
               </div>
             </Col>
 

@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col";
 import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import img3 from "./images/blog-1.jpg";
 import img4 from "./images/blog-2.jpg";
 import img1 from "./images/testimonial-1.jpg";
 import { NavLink, useParams } from "react-router-dom";
@@ -14,12 +13,29 @@ import blogDatas from "../../data/blogdata";
 export default function BLogSinglePart() {
   const { id } = useParams();
   let n_data = blogDatas.filter((cur_post) => {
-    return cur_post.id === id;
+    return cur_post.id == id;
   });
 
-  let Igg = n_data[0].title;
   return (
     <div>
+      <div className="bg-body-secondary">
+        <Container>
+          <Row>
+            <Col className="py-5">
+              {" "}
+              <div className="mx-auto text-center py-5">
+                <NavLink to="/" className="mainnav">
+                  Home
+                </NavLink>
+                /
+                <NavLink to="/blog" className="mainnav">
+                  {n_data[0].categories}
+                </NavLink>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       <Container>
         <Row>
           <Col>

@@ -26,13 +26,27 @@ export default function BlogParts() {
                 <p className="fs-6 text text-dark-emphasis">
                   {items.author} / {items.date}
                 </p>
-                <NavLink to="/singleblog" className="btn-pro">
+                <NavLink to={`/singleblog/${items.id}`} className="btn-pro">
                   <ButtonPart />
                 </NavLink>
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
+      );
+    });
+  };
+
+  const CategoryCard = () => {
+    return blogDatas.map((items) => {
+      return (
+        <NavLink
+          to={`/singleblog/${items.id}`}
+          className="d-block mainnav ps-0 py-2"
+        >
+          {" "}
+          {items.categories}
+        </NavLink>
       );
     });
   };
@@ -98,22 +112,7 @@ export default function BlogParts() {
             <div className="border-bottom pb-3 mt-4">
               <h3>Categories</h3>
 
-              <NavLink to="/singleblog" className="d-block mainnav ps-0 py-2">
-                {" "}
-                Fashion
-              </NavLink>
-              <NavLink to="/singleblog" className="d-block mainnav ps-0 py-2">
-                {" "}
-                Life Style
-              </NavLink>
-              <NavLink to="/singleblog" className="d-block mainnav ps-0 py-2">
-                {" "}
-                Trend
-              </NavLink>
-              <NavLink to="/singleblog" className="d-block mainnav ps-0 py-2">
-                {" "}
-                Popular
-              </NavLink>
+              <CategoryCard />
             </div>
           </Col>
         </Row>

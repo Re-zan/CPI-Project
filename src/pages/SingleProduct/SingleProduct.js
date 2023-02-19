@@ -4,16 +4,20 @@ import Mainnavbarpart from "../../components/Mainnavbar/Mainnavbarpart";
 import TopMenu from "../../components/Topmenubar/TopMenu";
 import Topsearch from "../../components/Topsearchbar/Topsearch";
 import FooterPart from "../../components/Footer/FooterPart";
-import AboutUsPagePart from "../../components/AboutUsPage/AboutUsPagePart";
+import SingleShopPagePart from "../../components/SingleShop/SingleShopPagePart";
+import Heading from "../../components/Heading/Heading";
+import OurRecentPro from "../../components/OurRecentPro/OurRecentPro";
 
-export default function AboutPage() {
+export default function SingleProduct() {
   return (
     <div>
       <TopMenu />
       <LogoPart />
       <Topsearch />
       <Mainnavbarpart />
-      <AboutUsPagePart />
+      <SingleShopPagePart />
+      <Heading title="Related Products" />
+      <OurRecentPro />
       <FooterPart />
     </div>
   );

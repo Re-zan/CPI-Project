@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import homeimg1 from "./images/KF3.webp";
 import "./DealPar.css";
+import { NavLink } from "react-router-dom";
 export default function DealPrat() {
   return (
     <div>
@@ -32,7 +33,9 @@ export default function DealPrat() {
                   $200.00
                 </del>
               </p>
-              <button className="btn_pro py-2 px-3">ADD TO CART</button>
+              <NavLink to="/addtocart">
+                <button className="btn_pro py-2 px-3">ADD TO CART</button>
+              </NavLink>
 
               <div className="d-flex justify-content-between py-3 fw-semibold">
                 <p>ALREADY SOLD: 20</p>

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import "./NewPro.css";
-import ButtonPart from "../CommonUtilti/Button/ButtonPart";
+import { Col, Container, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import ButtonPart from "../CommonUtilti/Button/ButtonPart";
 import productdata from "../../data/productdata";
 
-export default function NewPro() {
+export default function ShopPage() {
   const [product, setProduct] = useState(productdata);
 
   const [cart, setCart] = useState([]);
@@ -83,11 +82,57 @@ export default function NewPro() {
 
   return (
     <div>
-      <Container>
-        {" "}
-        <Row className="gy-3">
-          <ShopCart category="Jacket" />
-        </Row>
+      <div className="bg-body-secondary">
+        <Container>
+          <Row>
+            <Col className="py-5">
+              {" "}
+              <div className="mx-auto text-center py-5">
+                <NavLink to="/" className="mainnav">
+                  Home
+                </NavLink>
+                /
+                <NavLink to="/blog" className="mainnav">
+                  Blog
+                </NavLink>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <Container className="w-75 mx-auto my-4">
+        <Tabs
+          defaultActiveKey="Jacket"
+          transition={false}
+          id="noanim-tab-example"
+          className="mb-3"
+        >
+          <Tab eventKey="Jacket" title="Jacket">
+            <Row className="gy-3">
+              <ShopCart category="Jacket" />
+            </Row>
+          </Tab>
+          <Tab eventKey="Watch" title="Watch">
+            <Row className="gy-3">
+              <ShopCart category="Watch" />
+            </Row>
+          </Tab>
+          <Tab eventKey="Womens" title="Womens">
+            <Row className="gy-3">
+              <ShopCart category="Womens" />
+            </Row>
+          </Tab>
+          <Tab eventKey="Shoes" title="Shoes">
+            <Row className="gy-3">
+              <ShopCart category="Shoes" />
+            </Row>
+          </Tab>
+          <Tab eventKey="Jewellery" title="Jewellery">
+            <Row className="gy-3">
+              <ShopCart category="Jewellery" />
+            </Row>
+          </Tab>
+        </Tabs>
       </Container>
     </div>
   );

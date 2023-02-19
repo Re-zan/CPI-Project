@@ -4,16 +4,19 @@ import Mainnavbarpart from "../../components/Mainnavbar/Mainnavbarpart";
 import TopMenu from "../../components/Topmenubar/TopMenu";
 import Topsearch from "../../components/Topsearchbar/Topsearch";
 import FooterPart from "../../components/Footer/FooterPart";
-import AboutUsPagePart from "../../components/AboutUsPage/AboutUsPagePart";
-
-export default function AboutPage() {
+import Heading from "../../components/Heading/Heading";
+import OurRecentPro from "../../components/OurRecentPro/OurRecentPro";
+import AddToCardPage from "../../components/AddToCardPage/AddToCardPage";
+export default function Addtocart() {
   return (
     <div>
       <TopMenu />
       <LogoPart />
       <Topsearch />
       <Mainnavbarpart />
-      <AboutUsPagePart />
+      <AddToCardPage />
+      <Heading title="Related Products" />
+      <OurRecentPro />
       <FooterPart />
     </div>
   );

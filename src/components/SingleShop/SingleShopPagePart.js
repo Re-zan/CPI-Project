@@ -34,7 +34,7 @@ export default function SingleShopPagePart() {
         <Row>
           <Col sm={1} md={6}>
             <img
-              className="d-block w-100"
+              className="d-block w-100 shadow-lg rounded mt-5"
               src={n_data[0].image}
               alt="First slide"
             />
@@ -62,7 +62,7 @@ export default function SingleShopPagePart() {
                 <p>ALREADY SOLD: 20</p>
                 <p>AVAILABLE: 40</p>
               </div>
-              <p className="fw-semibold">HURRY UP! OFFER ENDS IN:</p>
+              <p className="fw-semibold">HURRY UP!</p>
             </div>
           </Col>
         </Row>

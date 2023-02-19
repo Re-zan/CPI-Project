@@ -43,7 +43,7 @@ export default function FooterPart() {
 
             <Col sm={1} md={3}>
               <h4 className="fs-6 text fw-bold text-white ms-4 mt-5">
-                Useful Links
+                USEFUL LINKS
               </h4>
               <div className="border-bottom border-warning w-25 ms-4"></div>
               <div className="ms-4">
@@ -68,7 +68,7 @@ export default function FooterPart() {
 
             <Col sm={1} md={3}>
               <h4 className="fs-6 text fw-bold text-white ms-4 mt-5">
-                Categories
+                CATEGORIES
               </h4>
               <div className="border-bottom border-warning w-25 ms-4"></div>
               <div className="ms-4">

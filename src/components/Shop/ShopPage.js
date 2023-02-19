@@ -63,11 +63,11 @@ export default function ShopPage() {
                     <i class="fa-regular fa-heart fa-lg"></i>
                   </p>
                   <p className="border border-secondary-subtle rounded p-1">
-                    <i class="fa-regular fa-eye"></i>
+                    <NavLink to={`/sinlgeshoppage/${item.id}`}>
+                      <i class="fa-regular fa-eye text-warning-emphasis"></i>
+                    </NavLink>
                   </p>
-                  <p className="border border-secondary-subtle rounded p-1">
-                    <i class="fa-regular fa-share-from-square"></i>
-                  </p>
+
                   <p className="border border-secondary-subtle rounded p-1">
                     <i class="fa-solid fa-cart-arrow-down"></i>
                   </p>

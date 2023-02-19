@@ -1,0 +1,23 @@
+.tR {
+  background-color: #b68c5a;
+  color: aliceblue;
+}
+.Quantity i,
+.Quantity span {
+  font-size: 16px;
+  padding: 10px;
+}
+.Quantity i {
+  background-color: #e2e2e2;
+}
+.Quantity span {
+  background-color: #d3d1d0;
+}
+.remove {
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.remove:hover {
+  font-size: 20px;
+  color: rgb(190, 14, 14);
+}

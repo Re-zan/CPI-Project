@@ -50,18 +50,18 @@ export default function DealPrat() {
                 </div>
 
                 <div className="bg-body-secondary border rounded p-3">
-                  <p className="fs-4 text-black fw-semibold">360</p>
-                  <p className="fs-6 text-body-secondary">Days</p>
+                  <p className="fs-4 text-black fw-semibold">24</p>
+                  <p className="fs-6 text-body-secondary">Hours</p>
                 </div>
 
                 <div className="bg-body-secondary border rounded p-3">
-                  <p className="fs-4 text-black fw-semibold">360</p>
-                  <p className="fs-6 text-body-secondary">Days</p>
+                  <p className="fs-4 text-black fw-semibold">59</p>
+                  <p className="fs-6 text-body-secondary">Min</p>
                 </div>
 
                 <div className="bg-body-secondary border rounded p-3">
-                  <p className="fs-4 text-black fw-semibold">360</p>
-                  <p className="fs-6 text-body-secondary">Days</p>
+                  <p className="fs-4 text-black fw-semibold">00</p>
+                  <p className="fs-6 text-body-secondary">Sec</p>
                 </div>
               </div>
             </div>

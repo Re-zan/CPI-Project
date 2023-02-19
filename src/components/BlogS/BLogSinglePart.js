@@ -14,9 +14,10 @@ import blogDatas from "../../data/blogdata";
 export default function BLogSinglePart() {
   const { id } = useParams();
   let n_data = blogDatas.filter((cur_post) => {
-    return cur_post.id == id;
+    return cur_post.id === id;
   });
 
+  let Igg = n_data[0].title;
   return (
     <div>
       <Container>
@@ -25,6 +26,7 @@ export default function BLogSinglePart() {
             <div className=" my-5">
               <h2 className="fs-3 text text-center">
                 Clothes Retail KPIs 2021 Guide for Clothes Executives.
+                <Igg />
               </h2>
               <p className="fs-6 text text-dark-emphasis pt-3 text-center">
                 By Mr Admin / Apr 06, 2022

@@ -24,7 +24,7 @@ export default function ShopPage() {
                 </NavLink>
                 /
                 <NavLink to="/blog" className="mainnav">
-                  Blog
+                  Shop
                 </NavLink>
               </div>
             </Col>

@@ -92,8 +92,8 @@ export default function ShopPage() {
                   Home
                 </NavLink>
                 /
-                <NavLink to="/blog" className="mainnav">
-                  Blog
+                <NavLink to="/shop" className="mainnav">
+                  Shop
                 </NavLink>
               </div>
             </Col>

@@ -83,20 +83,14 @@ export default function BLogSinglePart() {
                       <h6> SHARE THIS ARTICLE</h6>
                     </div>
                     <div className="bg-light  ms-auto">
-                      <p className=" bg-body-tertiary ">
+                      <NavLink to="https://www.facebook.com/">
                         {" "}
-                        <NavLink to="/blog" className="mainnav">
-                          Lifestyle
-                        </NavLink>{" "}
-                      </p>
-                    </div>
-                    <div className="bg-light ">
-                      <p className=" bg-body-tertiary ">
+                        <i class="fa-brands fa-facebook contactnum"></i>
+                      </NavLink>{" "}
+                      <NavLink to="https://www.instagram.com/">
                         {" "}
-                        <NavLink to="/blog" className="mainnav">
-                          Trend
-                        </NavLink>{" "}
-                      </p>
+                        <i class="fa-brands fa-square-instagram contactnum"></i>
+                      </NavLink>{" "}
                     </div>
                   </Stack>
                 </div>

@@ -60,15 +60,24 @@ export default function NewPro() {
                 </div>
                 <div className="overlay ">
                   <p className="border border-secondary-subtle rounded p-1">
-                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <NavLink to="/wishlist">
+                      <i class="fa-regular fa-heart text-dark"></i>
+                    </NavLink>
                   </p>
                   <p className="border border-secondary-subtle rounded p-1">
                     <NavLink to={`/sinlgeshoppage/${item.id}`}>
                       <i class="fa-regular fa-eye text-dark"></i>
                     </NavLink>
                   </p>
-                  <p className="border border-secondary-subtle rounded p-1" >
-                    <button className="btn border-0 p-0" onClick={() => { addToCart(item) }}><i class="fa-solid fa-cart-arrow-down"></i></button>                    
+                  <p className="border border-secondary-subtle rounded p-1">
+                    <button
+                      className="btn border-0 p-0"
+                      onClick={() => {
+                        addToCart(item);
+                      }}
+                    >
+                      <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
                   </p>
                 </div>
               </div>

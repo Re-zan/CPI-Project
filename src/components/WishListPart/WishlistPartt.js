@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 import ButtonPart from "../CommonUtilti/Button/ButtonPart";
+import { NavLink } from "react-router-dom";
 import productdata from "../../data/productdata";
 
-export default function ShopPage() {
+export default function WishlistPartt() {
   const [product, setProduct] = useState(productdata);
 
   const addToCart = (data) => {
@@ -59,14 +60,15 @@ export default function ShopPage() {
                 </div>
                 <div className="overlay ">
                   <p className="border border-secondary-subtle rounded p-1">
-                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <NavLink to="/wishlist">
+                      <i class="fa-regular fa-heart text-dark"></i>
+                    </NavLink>
                   </p>
                   <p className="border border-secondary-subtle rounded p-1">
                     <NavLink to={`/sinlgeshoppage/${item.id}`}>
-                      <i class="fa-regular fa-eye text-warning-emphasis"></i>
+                      <i class="fa-regular fa-eye text-dark"></i>
                     </NavLink>
                   </p>
-
                   <p className="border border-secondary-subtle rounded p-1">
                     <button
                       className="btn border-0 p-0"
@@ -74,7 +76,7 @@ export default function ShopPage() {
                         addToCart(item);
                       }}
                     >
-                      <i class="fa-solid fa-cart-arrow-down text-warning-emphasis"></i>
+                      <i class="fa-solid fa-cart-arrow-down"></i>
                     </button>
                   </p>
                 </div>
@@ -98,47 +100,19 @@ export default function ShopPage() {
                   Home
                 </NavLink>
                 /
-                <NavLink to="/shop" className="mainnav">
-                  Shop
+                <NavLink to="/wishlist" className="mainnav">
+                  WishList
                 </NavLink>
               </div>
             </Col>
           </Row>
         </Container>
       </div>
-      <Container className="w-75 mx-auto my-4">
-        <Tabs
-          defaultActiveKey="Jacket"
-          transition={false}
-          id="noanim-tab-example"
-          className="mb-3"
-        >
-          <Tab eventKey="Jacket" title="Jacket">
-            <Row className="gy-3">
-              <ShopCart category="Jacket" />
-            </Row>
-          </Tab>
-          <Tab eventKey="Watch" title="Watch">
-            <Row className="gy-3">
-              <ShopCart category="Watch" />
-            </Row>
-          </Tab>
-          <Tab eventKey="Womens" title="Womens">
-            <Row className="gy-3">
-              <ShopCart category="Womens" />
-            </Row>
-          </Tab>
-          <Tab eventKey="Shoes" title="Shoes">
-            <Row className="gy-3">
-              <ShopCart category="Shoes" />
-            </Row>
-          </Tab>
-          <Tab eventKey="Jewellery" title="Jewellery">
-            <Row className="gy-3">
-              <ShopCart category="Jewellery" />
-            </Row>
-          </Tab>
-        </Tabs>
+      <Container className="my-5 py-5">
+        {" "}
+        <Row className="gy-3">
+          <ShopCart category="Jacket" />
+        </Row>
       </Container>
     </div>
   );

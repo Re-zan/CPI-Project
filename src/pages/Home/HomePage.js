@@ -27,7 +27,6 @@ export default function HomePage() {
       <OurRecentPro />
       <Heading title="Deal Of The Day" />
       <DealPrat />
-
       <Heading title="New Products" />
       <NewPro />
       <Paralex />

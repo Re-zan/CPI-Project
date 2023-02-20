@@ -6,11 +6,9 @@ import { NavLink } from "react-router-dom";
 import "./Topsearch.css";
 
 export default function Topsearch() {
-
   let cartLength = JSON.parse(localStorage.getItem("cartItems"));
 
   let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
-
   return (
     <>
       <div className="topsearch">
@@ -25,24 +23,20 @@ export default function Topsearch() {
 
             <div className="search-icons d-flex">
               {" "}
-              <span className="me-4">
-                <i class="fa-solid fa-user"></i>
+              <span className="me-4 position-relative">
+                <NavLink to="/wishlist">
+                  <i class="fa-regular fa-heart text-dark"></i>
+                </NavLink>
               </span>
               <span className="me-4 position-relative">
-                <i class="fa-regular fa-heart">
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
-                    99+
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                </i>
-              </span>
-              <span className="me-4 position-relative">
-                <i class="fa-solid fa-cart-arrow-down">
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
-                    { cartItemsLen }+
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                </i>
+                <NavLink to="/addtocart">
+                  <i class="fa-solid fa-cart-arrow-down text-dark">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
+                      {cartItemsLen}+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </i>
+                </NavLink>
               </span>{" "}
             </div>
           </Stack>

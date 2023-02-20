@@ -4,16 +4,16 @@ import Mainnavbarpart from "../../components/Mainnavbar/Mainnavbarpart";
 import TopMenu from "../../components/Topmenubar/TopMenu";
 import Topsearch from "../../components/Topsearchbar/Topsearch";
 import FooterPart from "../../components/Footer/FooterPart";
+import WishlistPartt from "../../components/WishListPart/WishlistPartt";
 
-import AddToCardPage from "../../components/AddToCardPage/AddToCardPage";
-export default function Addtocart() {
+export default function WishListPage() {
   return (
     <div>
       <TopMenu />
       <LogoPart />
       <Topsearch />
       <Mainnavbarpart />
-      <AddToCardPage />
+      <WishlistPartt />
       <FooterPart />
     </div>
   );

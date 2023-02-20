@@ -7,7 +7,7 @@ import { Button, Form } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
 import "./AddToCard.css";
 import img1 from "./images/products/1.jpg";
-import img2 from "./images/products/2.jpg";
+// import img2 from "./images/products/2.jpg";
 export default function AddToCardPage() {
   let cartLength = JSON.parse(localStorage.getItem("cartItems"));
 
@@ -21,7 +21,11 @@ export default function AddToCardPage() {
         <>
           <tr>
             <td>
-              <img src={item.image} alt="dfsd" style={{ width:"80px", height:"80px" }} />
+              <img
+                src={item.image}
+                alt="dfsd"
+                style={{ width: "80px", height: "80px" }}
+              />
             </td>
             <td>
               <h4>{item.title}</h4>
@@ -29,9 +33,7 @@ export default function AddToCardPage() {
             <td>
               <span>$ {item.price}</span>
             </td>
-            <td className="Quantity">
-              1
-            </td>
+            <td className="Quantity">1</td>
             <td>
               {" "}
               <span>$ {item.price * 1}</span>
@@ -98,6 +100,29 @@ export default function AddToCardPage() {
                 </tr>
               </thead>
               <tbody className="text-center align-center">
+                <tr>
+                  <td>
+                    <img
+                      src={img1}
+                      alt="dfsd"
+                      style={{ width: "80px", height: "80px" }}
+                    />
+                  </td>
+                  <td>
+                    <h4>gdfg</h4>
+                  </td>
+                  <td>
+                    <span>$ 546546</span>
+                  </td>
+                  <td className="Quantity">1</td>
+                  <td>
+                    {" "}
+                    <span>$ 45435</span>
+                  </td>
+                  <td className="remove">
+                    <i class="fa-solid fa-xmark"></i>
+                  </td>
+                </tr>
                 <CartVie />
               </tbody>
             </Table>

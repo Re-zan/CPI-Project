@@ -6,9 +6,9 @@ import { NavLink } from "react-router-dom";
 import "./Topsearch.css";
 
 export default function Topsearch() {
-  let cartLength = JSON.parse(localStorage.getItem("cartItems"));
-
-  let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
+  // let cartLength = JSON.parse(localStorage.getItem("cartItems"));
+  // {cartItemsLen}
+  // let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
   return (
     <>
       <div className="topsearch">
@@ -32,8 +32,7 @@ export default function Topsearch() {
                 <NavLink to="/addtocart">
                   <i class="fa-solid fa-cart-arrow-down text-dark">
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
-                      {cartItemsLen}+
-                      <span class="visually-hidden">unread messages</span>
+                      +<span class="visually-hidden">unread messages</span>
                     </span>
                   </i>
                 </NavLink>

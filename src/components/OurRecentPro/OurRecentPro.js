@@ -11,23 +11,6 @@ import { NavLink } from "react-router-dom";
 import productdata from "../../data/productdata";
 
 export default function OurRecentPro() {
-  const [product, setProduct] = useState(productdata);
-
-  const addToCart = (data) => {
-    let cartLength = JSON.parse(localStorage.getItem("cartItems"));
-
-    if (cartLength === null || cartLength === undefined) {
-      let dataCart = [];
-      dataCart.push(data);
-      localStorage.setItem("cartItems", JSON.stringify(dataCart));
-    } else {
-      let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-      cartItems.push(data);
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      window.location.reload();
-    }
-  };
-
   return (
     <div>
       <Carousel className="py-5 px-3 bg-body-secondary mt-4" variant="dark">
@@ -51,9 +34,7 @@ export default function OurRecentPro() {
                   src={product2}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
             <Col>
@@ -63,9 +44,7 @@ export default function OurRecentPro() {
                   src={product3}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
           </Row>
@@ -80,9 +59,7 @@ export default function OurRecentPro() {
                   src={product1}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
 
@@ -93,9 +70,7 @@ export default function OurRecentPro() {
                   src={product2}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
             <Col>
@@ -105,9 +80,7 @@ export default function OurRecentPro() {
                   src={product3}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
           </Row>
@@ -122,9 +95,7 @@ export default function OurRecentPro() {
                   src={product1}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
 
@@ -135,9 +106,7 @@ export default function OurRecentPro() {
                   src={product2}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
             <Col>
@@ -147,9 +116,7 @@ export default function OurRecentPro() {
                   src={product3}
                   alt="Third slide"
                 />
-                <NavLink to="/addtocart">
-                  <button className="btn_pro py-2 px-3">ADD TO CART</button>
-                </NavLink>
+                <h2 className="m-4 p-2"> Mens Sharwani </h2>
               </div>
             </Col>
           </Row>

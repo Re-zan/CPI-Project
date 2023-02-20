@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,6 +9,60 @@ import "./AddToCard.css";
 import img1 from "./images/products/1.jpg";
 import img2 from "./images/products/2.jpg";
 export default function AddToCardPage() {
+  let cartLength = JSON.parse(localStorage.getItem("cartItems"));
+
+  let [cartItems, setCartItems] = useState(cartLength);
+  let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
+
+  // Component Cart Vie
+  const CartVie = () => {
+    return cartItems.map((item) => {
+      return (
+        <>
+          <tr>
+            <td>
+              <img src={item.image} alt="dfsd" style={{ width:"80px", height:"80px" }} />
+            </td>
+            <td>
+              <h4>{item.title}</h4>
+            </td>
+            <td>
+              <span>$ {item.price}</span>
+            </td>
+            <td className="Quantity">
+              1
+            </td>
+            <td>
+              {" "}
+              <span>$ {item.price * 1}</span>
+            </td>
+            <td className="remove">
+              <i
+                class="fa-solid fa-xmark"
+                onClick={() => {
+                  removeCart(item.id);
+                }}
+              ></i>
+            </td>
+          </tr>
+        </>
+      );
+    });
+  };
+
+  // Remove Cart Items
+  const removeCart = (id) => {
+    let n_data = cartItems.filter((cur_post) => {
+      return cur_post.id !== id;
+    });
+
+    setCartItems(n_data);
+    setCartItemsLen(n_data.length);
+  };
+
+  // Update the localStorage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
   return (
     <div>
       <div className="bg-body-secondary">
@@ -35,7 +89,6 @@ export default function AddToCardPage() {
             <Table className="mt-5" bordered responsive="md">
               <thead>
                 <tr className="tR text-center">
-                  <th className="p-4">Serial No</th>
                   <th className="p-4">Image</th>
                   <th className="p-4">Product</th>
                   <th className="p-4">Price</th>
@@ -45,58 +98,7 @@ export default function AddToCardPage() {
                 </tr>
               </thead>
               <tbody className="text-center align-center">
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <img src={img1} alt="dfsd" className="h-25 w-25" />
-                  </td>
-                  <td>
-                    {" "}
-                    <h4>It is a long established fact that a</h4>
-                  </td>
-                  <td>
-                    {" "}
-                    <span>$200</span>
-                  </td>
-                  <td className="Quantity">
-                    <i class="fa-solid fa-minus"></i>
-                    <span>1</span>
-                    <i class="fa-solid fa-plus"></i>
-                  </td>
-                  <td>
-                    {" "}
-                    <span>$2000</span>
-                  </td>
-                  <td className="remove">
-                    <i class="fa-solid fa-xmark"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <img src={img2} alt="dfsd" className="h-25 w-25" />
-                  </td>
-                  <td>
-                    {" "}
-                    <h4>It is a long established fact that a</h4>
-                  </td>
-                  <td>
-                    {" "}
-                    <span>$200</span>
-                  </td>
-                  <td className="Quantity">
-                    <i class="fa-solid fa-minus"></i>
-                    <span>1</span>
-                    <i class="fa-solid fa-plus"></i>
-                  </td>
-                  <td>
-                    {" "}
-                    <span>$2000</span>
-                  </td>
-                  <td className="remove">
-                    <i class="fa-solid fa-xmark"></i>
-                  </td>
-                </tr>
+                <CartVie />
               </tbody>
             </Table>
           </Col>

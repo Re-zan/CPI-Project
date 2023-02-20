@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Stack from "react-bootstrap/Stack";
@@ -6,6 +6,11 @@ import { NavLink } from "react-router-dom";
 import "./Topsearch.css";
 
 export default function Topsearch() {
+
+  let cartLength = JSON.parse(localStorage.getItem("cartItems"));
+
+  let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
+
   return (
     <>
       <div className="topsearch">
@@ -34,7 +39,7 @@ export default function Topsearch() {
               <span className="me-4 position-relative">
                 <i class="fa-solid fa-cart-arrow-down">
                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
-                    99+
+                    { cartItemsLen }+
                     <span class="visually-hidden">unread messages</span>
                   </span>
                 </i>

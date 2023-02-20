@@ -14,103 +14,122 @@ export default function OurRecentPro() {
   const RecentproductdataCard = () => {
     return Recentproductdata.map((items) => {
       return (
-        <Carousel.Item>
-          <Row>
-            <Col>
+        <div className="carousel-item active">
+          <div className="row">
+            <div className="col-lg-4">
               <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
                 <img
-                  className="d-block w-100 "
-                  src={items.image}
+                  className="d-block w-100"
+                  src={product1}
                   alt="Third slide"
                 />
-                <NavLink to="/sinlgepropage">
-                  <ButtonPart />
-                </NavLink>
+                <ButtonPart />
               </div>
-            </Col>
-          </Row>
-        </Carousel.Item>
+            </div>
+            <div className="col-lg-4">
+              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
+                <img
+                  className="d-block w-100"
+                  src={product2}
+                  alt="Third slide"
+                />
+                <ButtonPart />
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
+                <img
+                  className="d-block w-100"
+                  src={product3}
+                  alt="Third slide"
+                />
+                <ButtonPart />
+              </div>
+            </div>
+          </div>
+        </div>
       );
     });
   };
 
   return (
-    <div>
-      <Carousel className="py-5 px-3 bg-body-secondary mt-4" variant="dark">
-        <Carousel.Item>
-          <Row>
-            <Col>
-              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
-                <img
-                  className="d-block w-100"
-                  src={product1}
-                  alt="Third slide"
-                />
-                <NavLink to="/singleblog" className="btn-pro">
-                  <ButtonPart />
-                </NavLink>
-              </div>
-            </Col>
-
-            <Col>
-              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
-                <img
-                  className="d-block w-100"
-                  src={product2}
-                  alt="Third slide"
-                />
-                <ButtonPart />
-              </div>
-            </Col>
-            <Col>
-              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
-                <img
-                  className="d-block w-100"
-                  src={product3}
-                  alt="Third slide"
-                />
-                <ButtonPart />
-              </div>
-            </Col>
-          </Row>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Row>
-            <Col>
-              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
-                <img
-                  className="d-block w-100"
-                  src={product1}
-                  alt="Third slide"
-                />
-                <ButtonPart />
-              </div>
-            </Col>
-
-            <Col>
-              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
-                <img
-                  className="d-block w-100"
-                  src={product2}
-                  alt="Third slide"
-                />
-                <ButtonPart />
-              </div>
-            </Col>
-            <Col>
-              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
-                <img
-                  className="d-block w-100"
-                  src={product3}
-                  alt="Third slide"
-                />
-                <ButtonPart />
-              </div>
-            </Col>
-          </Row>
-        </Carousel.Item>
-      </Carousel>
-    </div>
+    <>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <RecentproductdataCard />
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </>
   );
+}
+
+{
+  /* <Carousel className="py-5 px-3 bg-body-secondary mt-4" variant="dark">
+        <Carousel.Item>
+          <RecentproductdataCard />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Row>
+            <Col>
+              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
+                <img
+                  className="d-block w-100"
+                  src={product1}
+                  alt="Third slide"
+                />
+                <ButtonPart />
+              </div>
+            </Col>
+
+            <Col>
+              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
+                <img
+                  className="d-block w-100"
+                  src={product2}
+                  alt="Third slide"
+                />
+                <ButtonPart />
+              </div>
+            </Col>
+            <Col>
+              <div className="pro_content border border-dark-subtle rounded bg-body-tertiary">
+                <img
+                  className="d-block w-100"
+                  src={product3}
+                  alt="Third slide"
+                />
+                <ButtonPart />
+              </div>
+            </Col>
+          </Row>
+        </Carousel.Item>
+      </Carousel> */
 }

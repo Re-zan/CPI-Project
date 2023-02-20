@@ -10,20 +10,19 @@ import productdata from "../../data/productdata";
 export default function NewPro() {
   const [product, setProduct] = useState(productdata);
 
-  const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false);
-
   const addToCart = (data) => {
-    setCart([...cart, { ...data, quantity: 1 }]);
-    localStorage.setItem("productItems", JSON.stringify(cart));
-  };
+    let cartLength = JSON.parse(localStorage.getItem("cartItems"));
 
-  const handleShow = (value) => {
-    setShowCart(value);
-  };
-
-  const updateCartLen = (value) => {
-    setCart(value);
+    if (cartLength === null || cartLength === undefined) {
+      let dataCart = [];
+      dataCart.push(data);
+      localStorage.setItem("cartItems", JSON.stringify(dataCart));
+    } else {
+      let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+      cartItems.push(data);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      window.location.reload();
+    }
   };
 
   function ShopCart(props) {
@@ -68,8 +67,8 @@ export default function NewPro() {
                       <i class="fa-regular fa-eye text-dark"></i>
                     </NavLink>
                   </p>
-                  <p className="border border-secondary-subtle rounded p-1">
-                    <i class="fa-solid fa-cart-arrow-down"></i>
+                  <p className="border border-secondary-subtle rounded p-1" >
+                    <button className="btn border-0 p-0" onClick={() => { addToCart(item) }}><i class="fa-solid fa-cart-arrow-down"></i></button>                    
                   </p>
                 </div>
               </div>

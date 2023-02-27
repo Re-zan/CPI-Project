@@ -7,7 +7,6 @@ import SingleBlogPart from "./pages/SingleBlog/SingleBlogPart";
 import Shop from "./pages/Shop/Shop";
 import Contact from "./pages/Contact/Contact";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
-import RecentProduct from "./pages/OurRecentProduct/RecentProduct";
 import Addtocart from "./pages/AddToCart/Addtocart";
 import WishListPage from "./pages/WishList/WishListPage";
 import MainLogin from "./components/Login/MainLogin";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/wishlist" element={<WishListPage />}></Route>
         <Route path="/addtocart" element={<Addtocart />}></Route>
         <Route path="/sinlgeshoppage/:id" element={<SingleProduct />}></Route>
-        <Route path="/sinlgepropage" element={<RecentProduct />}></Route>
         <Route path="/blog" element={<BlogPage />}></Route>
         <Route path="/singleblog/:id" element={<SingleBlogPart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>

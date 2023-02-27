@@ -1,6 +1,5 @@
 import React from "react";
 import Heading from "../../components/Heading/Heading";
-import LogoPart from "../../components/Logo/LogoPart";
 import Mainnavbarpart from "../../components/Mainnavbar/Mainnavbarpart";
 import OurRecentPro from "../../components/OurRecentPro/OurRecentPro";
 import TopMenu from "../../components/Topmenubar/TopMenu";
@@ -12,7 +11,6 @@ export default function Shop() {
   return (
     <div>
       <TopMenu />
-      <LogoPart />
       <Topsearch />
       <Mainnavbarpart />
       <ShopPage />

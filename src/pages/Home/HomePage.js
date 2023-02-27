@@ -1,6 +1,5 @@
 import React from "react";
 import Heading from "../../components/Heading/Heading";
-import LogoPart from "../../components/Logo/LogoPart";
 import Mainnavbarpart from "../../components/Mainnavbar/Mainnavbarpart";
 import OurRecentPro from "../../components/OurRecentPro/OurRecentPro";
 import ShopTopic from "../../components/ShopTopic/ShopTopic";
@@ -15,11 +14,9 @@ import Testominal from "../../components/Testominal/Testominal";
 import FooterPart from "../../components/Footer/FooterPart";
 
 export default function HomePage() {
-  
   return (
     <>
       <TopMenu />
-      <LogoPart />
       <Topsearch />
       <Mainnavbarpart />
       <SliderPart />

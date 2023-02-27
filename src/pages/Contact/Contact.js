@@ -1,5 +1,4 @@
 import React from "react";
-import LogoPart from "../../components/Logo/LogoPart";
 import Mainnavbarpart from "../../components/Mainnavbar/Mainnavbarpart";
 
 import TopMenu from "../../components/Topmenubar/TopMenu";
@@ -10,10 +9,8 @@ export default function Contact() {
   return (
     <div>
       <TopMenu />
-      <LogoPart />
       <Topsearch />
       <Mainnavbarpart />
-
       <ContacParts />
       <FooterPart />
     </div>

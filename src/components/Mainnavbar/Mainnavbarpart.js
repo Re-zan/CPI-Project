@@ -8,7 +8,7 @@ import "./Mainnavbarpart.css";
 export default function Mainnavbarpart() {
   return (
     <>
-      <Navbar expand="lg">
+      <Navbar expand="lg" className="py-3">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav ">

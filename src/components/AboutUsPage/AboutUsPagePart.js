@@ -1,12 +1,31 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import aboutimg1 from "./images/about_us_img_11-1.png";
 import men1 from "./images/team_11-1.png";
 
 export default function AboutUsPagePart() {
   return (
     <div>
-      <Container>
+      <div className="bg-body-secondary">
+        <Container>
+          <Row>
+            <Col className="py-5">
+              {" "}
+              <div className="mx-auto text-center py-5">
+                <NavLink to="/" className="mainnav">
+                  Home
+                </NavLink>
+                /
+                <NavLink to="/about" className="mainnav">
+                  About US
+                </NavLink>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <Container className="pt-4">
         <Row className="shadow p-4 my-3 bg-body rounded">
           <Col sm={12} md={6} className="p-4 pt-0">
             <Col sm={12} md={12} lg={12}>

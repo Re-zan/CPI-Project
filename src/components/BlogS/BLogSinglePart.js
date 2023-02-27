@@ -85,11 +85,11 @@ export default function BLogSinglePart() {
                     <div className="bg-light  ms-auto">
                       <NavLink to="https://www.facebook.com/">
                         {" "}
-                        <i class="fa-brands fa-facebook contactnum"></i>
+                        <i className="fa-brands fa-facebook contactnum"></i>
                       </NavLink>{" "}
                       <NavLink to="https://www.instagram.com/">
                         {" "}
-                        <i class="fa-brands fa-square-instagram contactnum"></i>
+                        <i className="fa-brands fa-square-instagram contactnum"></i>
                       </NavLink>{" "}
                     </div>
                   </Stack>

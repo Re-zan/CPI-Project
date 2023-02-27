@@ -24,11 +24,11 @@ export default function OurSingleProPage() {
           </Col>
           <Col sm={1} md={6}>
             <div className="content mt-5 pt-5 px-2">
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star-half-stroke text-warning"></i>
-              <i class="fa-solid fa-star-half-stroke text-warning"></i>
+              <i className="fa-solid fa-star text-warning"></i>
+              <i className="fa-solid fa-star text-warning"></i>
+              <i className="fa-solid fa-star text-warning"></i>
+              <i className="fa-solid fa-star-half-stroke text-warning"></i>
+              <i className="fa-solid fa-star-half-stroke text-warning"></i>
               <h5 className="fs-5 text pt-3">{n_data[0].title}</h5>
               <p className="text-body-tertiary ">{n_data[0].description}</p>
               <p className="fs-4 text fw-bold text-warning-emphasis">

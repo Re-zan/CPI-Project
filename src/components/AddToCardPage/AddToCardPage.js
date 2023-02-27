@@ -9,61 +9,61 @@ import "./AddToCard.css";
 import img1 from "./images/products/1.jpg";
 // import img2 from "./images/products/2.jpg";
 export default function AddToCardPage() {
-  let cartLength = JSON.parse(localStorage.getItem("cartItems"));
+  // let cartLength = JSON.parse(localStorage.getItem("cartItems"));
 
-  let [cartItems, setCartItems] = useState(cartLength);
-  let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
+  // let [cartItems, setCartItems] = useState(cartLength);
+  // let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
 
-  // Component Cart Vie
-  const CartVie = () => {
-    return cartItems.map((item) => {
-      return (
-        <>
-          <tr>
-            <td>
-              <img
-                src={item.image}
-                alt="dfsd"
-                style={{ width: "80px", height: "80px" }}
-              />
-            </td>
-            <td>
-              <h4>{item.title}</h4>
-            </td>
-            <td>
-              <span>$ {item.price}</span>
-            </td>
-            <td className="Quantity">1</td>
-            <td>
-              {" "}
-              <span>$ {item.price * 1}</span>
-            </td>
-            <td className="remove">
-              <i
-                class="fa-solid fa-xmark"
-                onClick={() => {
-                  removeCart(item.id);
-                }}
-              ></i>
-            </td>
-          </tr>
-        </>
-      );
-    });
-  };
+  // // Component Cart Vie
+  // const CartVie = () => {
+  //   return cartItems.map((item) => {
+  //     return (
+  //       <>
+  //         <tr>
+  //           <td>
+  //             <img
+  //               src={item.image}
+  //               alt="dfsd"
+  //               style={{ width: "80px", height: "80px" }}
+  //             />
+  //           </td>
+  //           <td>
+  //             <h4>{item.title}</h4>
+  //           </td>
+  //           <td>
+  //             <span>$ {item.price}</span>
+  //           </td>
+  //           <td className="Quantity">1</td>
+  //           <td>
+  //             {" "}
+  //             <span>$ {item.price * 1}</span>
+  //           </td>
+  //           <td className="remove">
+  //             <i
+  //               className="fa-solid fa-xmark"
+  //               onClick={() => {
+  //                 removeCart(item.id);
+  //               }}
+  //             ></i>
+  //           </td>
+  //         </tr>
+  //       </>
+  //     );
+  //   });
+  // };
 
-  // Remove Cart Items
-  const removeCart = (id) => {
-    let n_data = cartItems.filter((cur_post) => {
-      return cur_post.id !== id;
-    });
+  // // Remove Cart Items
+  // const removeCart = (id) => {
+  //   let n_data = cartItems.filter((cur_post) => {
+  //     return cur_post.id !== id;
+  //   });
 
-    setCartItems(n_data);
-    setCartItemsLen(n_data.length);
-  };
+  //   setCartItems(n_data);
+  //   setCartItemsLen(n_data.length);
+  // };
 
-  // Update the localStorage
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  // // Update the localStorage
+  // localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
   return (
     <div>
@@ -109,7 +109,7 @@ export default function AddToCardPage() {
                     />
                   </td>
                   <td>
-                    <h4>gdfg</h4>
+                    <h4>Shoes </h4>
                   </td>
                   <td>
                     <span>$ 546546</span>
@@ -120,10 +120,10 @@ export default function AddToCardPage() {
                     <span>$ 45435</span>
                   </td>
                   <td className="remove">
-                    <i class="fa-solid fa-xmark"></i>
+                    <i className="fa-solid fa-xmark"></i>
                   </td>
                 </tr>
-                <CartVie />
+                {/* <CartVie /> */}
               </tbody>
             </Table>
           </Col>

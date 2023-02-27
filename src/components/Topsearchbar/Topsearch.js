@@ -7,7 +7,7 @@ import "./Topsearch.css";
 
 export default function Topsearch() {
   // let cartLength = JSON.parse(localStorage.getItem("cartItems"));
-  // {cartItemsLen}
+ 
   // let [cartItemsLen, setCartItemsLen] = useState(cartLength.length);
   return (
     <>
@@ -17,7 +17,7 @@ export default function Topsearch() {
             <div className="mx-auto w-100 position-relative search">
               <Form.Control placeholder="Search Items" />{" "}
               <NavLink to="#" className="me-3  position-absolute top-0 end-0">
-                <i class="fa-solid fa-magnifying-glass pt-2"></i>
+                <i className="fa-solid fa-magnifying-glass pt-2"></i>
               </NavLink>
             </div>
 
@@ -25,14 +25,15 @@ export default function Topsearch() {
               {" "}
               <span className="me-4 position-relative">
                 <NavLink to="/wishlist">
-                  <i class="fa-regular fa-heart text-dark"></i>
+                  <i className="fa-regular fa-heart text-dark"></i>
                 </NavLink>
               </span>
               <span className="me-4 position-relative">
                 <NavLink to="/addtocart">
-                  <i class="fa-solid fa-cart-arrow-down text-dark">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
-                      +<span class="visually-hidden">unread messages</span>
+                  <i className="fa-solid fa-cart-arrow-down text-dark">
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill ">
+                    {/* {cartItemsLen}  */}
+                    +<span className="visually-hidden">unread messages</span>
                     </span>
                   </i>
                 </NavLink>

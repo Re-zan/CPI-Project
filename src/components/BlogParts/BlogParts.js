@@ -105,7 +105,7 @@ export default function BlogParts() {
             <div className=" w-75 position-relative search border-bottom pb-5">
               <Form.Control placeholder="Search Items" />{" "}
               <NavLink to="#" className="me-3  position-absolute top-0 end-0">
-                <i class="fa-solid fa-magnifying-glass pt-2"></i>
+                <i className="fa-solid fa-magnifying-glass pt-2"></i>
               </NavLink>
             </div>
 

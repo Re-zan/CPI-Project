@@ -130,7 +130,7 @@ export default function ContacParts() {
               </div>
               <div className="d-flex p-5">
                 <div>
-                  <a href=""><i class="fa-solid fa-store fs-4 me-3 pt-1" style={{ color: "#c39f57" }}></i></a>
+                  <a href=""><i className="fa-solid fa-store fs-4 me-3 pt-1" style={{ color: "#c39f57" }}></i></a>
                 </div>
                 <div>
                   <h5 className="fw-semibold fs-4"
@@ -145,7 +145,7 @@ export default function ContacParts() {
               </div>
               <div className="d-flex pb-5 ps-5">
               <div>
-                  <a href=""><i class="fa-solid fa-store fs-4 me-3 pt-1" style={{ color: "#c39f57" }}></i></a>
+                  <a href=""><i className="fa-solid fa-store fs-4 me-3 pt-1" style={{ color: "#c39f57" }}></i></a>
                 </div>
                 <div>
                   <h5 className="fw-semibold fs-4"

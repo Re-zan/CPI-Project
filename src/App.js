@@ -6,12 +6,12 @@ import BlogPage from "./pages/Blog/BlogPage";
 import SingleBlogPart from "./pages/SingleBlog/SingleBlogPart";
 import Shop from "./pages/Shop/Shop";
 import Contact from "./pages/Contact/Contact";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import RecentProduct from "./pages/OurRecentProduct/RecentProduct";
 import Addtocart from "./pages/AddToCart/Addtocart";
 import WishListPage from "./pages/WishList/WishListPage";
+import MainLogin from "./components/Login/MainLogin";
+import MainRegister from "./components/Register/MainRegister";
 
 function App() {
   return (
@@ -27,8 +27,8 @@ function App() {
         <Route path="/blog" element={<BlogPage />}></Route>
         <Route path="/singleblog/:id" element={<SingleBlogPart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<MainLogin />}></Route>
+        <Route path="/register" element={<MainRegister />}></Route>
       </Routes>
     </BrowserRouter>
   );

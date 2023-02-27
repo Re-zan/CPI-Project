@@ -5,21 +5,25 @@ import "./TopMenu.css";
 export default function TopMenu() {
   return (
     <>
-      <div className="topheader ">
+      <div className="topheader">
         <Container>
           <div className=" d-flex justify-content-between">
             <div>
               <NavLink to="https://www.facebook.com/">
                 {" "}
-                <i class="fa-brands fa-facebook contactnum"></i>
+                <i className="fa-brands fa-square-facebook header_social_icon fs-6 me-3  rounded p-1"></i> 
               </NavLink>{" "}
               <NavLink to="https://www.instagram.com/">
                 {" "}
-                <i class="fa-brands fa-square-instagram contactnum"></i>
+                <i className="fa-brands fs-6 me-3 header_social_icon rounded p-1 fa-twitter "></i>
               </NavLink>{" "}
               <NavLink to="https://www.youtube.com/">
                 {" "}
-                <i class="fa-brands fa-youtube contactnum"></i>
+                <i className="fa-brands fa-square-instagram header_social_icon fs-6 me-3  rounded p-1"></i>
+              </NavLink>{" "}
+              <NavLink to="https://www.youtube.com/">
+                {" "}
+                <i className="fa-brands fa-linkedin header_social_icon fs-6 me-3  rounded p-1"></i>
               </NavLink>{" "}
             </div>
 

@@ -81,15 +81,15 @@ export default function FooterPart() {
               <div className="border-bottom border-warning w-25"></div>
               <div className="contact">
                 <p>
-                  <i class="fa-solid fa-location-dot me-2"></i>
+                  <i className="fa-solid fa-location-dot me-2"></i>
                   419 State 414 Rte Beaver Dams, New York(NY), 14812, USA
                 </p>
                 <p>
-                  <i class="fa-solid fa-phone me-2"></i>
+                  <i className="fa-solid fa-phone me-2"></i>
                   (607) 936-8058
                 </p>
                 <p>
-                  <i class="fa-solid fa-envelope me-2"></i>
+                  <i className="fa-solid fa-envelope me-2"></i>
                   Example@Gmail.Com
                 </p>
               </div>

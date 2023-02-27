@@ -43,11 +43,11 @@ export default function NewPro() {
                     {item["categories"]}
                   </h5>
                   <h6 className="text-body-tertiary ">{item.title}</h6>
-                  <i class="fa-solid fa-star text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
                   <p className="fs-6 text fw-bold ">
                     $ {item["discount"]}
                     <del className="fs-6 text fw-lighter text-body-tertiary">
@@ -61,12 +61,12 @@ export default function NewPro() {
                 <div className="overlay ">
                   <p className="border border-secondary-subtle rounded p-1">
                     <NavLink to="/wishlist">
-                      <i class="fa-regular fa-heart text-dark"></i>
+                      <i className="fa-regular fa-heart text-dark"></i>
                     </NavLink>
                   </p>
                   <p className="border border-secondary-subtle rounded p-1">
                     <NavLink to={`/sinlgeshoppage/${item.id}`}>
-                      <i class="fa-regular fa-eye text-dark"></i>
+                      <i className="fa-regular fa-eye text-dark"></i>
                     </NavLink>
                   </p>
                   <p className="border border-secondary-subtle rounded p-1">
@@ -76,7 +76,7 @@ export default function NewPro() {
                         addToCart(item);
                       }}
                     >
-                      <i class="fa-solid fa-cart-arrow-down"></i>
+                      <i className="fa-solid fa-cart-arrow-down"></i>
                     </button>
                   </p>
                 </div>

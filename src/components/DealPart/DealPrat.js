@@ -14,11 +14,11 @@ export default function DealPrat() {
           </Col>
           <Col sm={1} md={6}>
             <div className="content mt-5 pt-5 px-2">
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star text-warning"></i>
-              <i class="fa-solid fa-star-half-stroke text-warning"></i>
-              <i class="fa-solid fa-star-half-stroke text-warning"></i>
+              <i className="fa-solid fa-star text-warning"></i>
+              <i className="fa-solid fa-star text-warning"></i>
+              <i className="fa-solid fa-star text-warning"></i>
+              <i className="fa-solid fa-star-half-stroke text-warning"></i>
+              <i className="fa-solid fa-star-half-stroke text-warning"></i>
               <h5 className="fs-5 text pt-3">
                 SHAMPOO, CONDITIONER & FACEWASH PACKS
               </h5>

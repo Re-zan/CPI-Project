@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
@@ -6,8 +6,15 @@ import Tabs from "react-bootstrap/Tabs";
 import ButtonPart from "../CommonUtilti/Button/ButtonPart";
 import productdata from "../../data/productdata";
 
+
 export default function ShopPage() {
-  const [product, setProduct] = useState(productdata);
+  const [product, setProduct] = useState([]);
+  useEffect(()=>{
+      fetch("products.json")
+      .then(res=>res.json())
+      .then(data=>setProduct(data))
+  },[]);
+
 
   const addToCart = (data) => {
     let cartLength = JSON.parse(localStorage.getItem("cartItems"));
@@ -42,11 +49,11 @@ export default function ShopPage() {
                     {item["categories"]}
                   </h5>
                   <h6 className="text-body-tertiary ">{item.title}</h6>
-                  <i class="fa-solid fa-star text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
-                  <i class="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
+                  <i className="fa-solid fa-star-half-stroke text-warning fa-sm"></i>
                   <p className="fs-6 text fw-bold ">
                     $ {item["discount"]}
                     <del className="fs-6 text fw-lighter text-body-tertiary">
@@ -59,11 +66,11 @@ export default function ShopPage() {
                 </div>
                 <div className="overlay ">
                   <p className="border border-secondary-subtle rounded p-1">
-                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <i className="fa-regular fa-heart fa-lg"></i>
                   </p>
                   <p className="border border-secondary-subtle rounded p-1">
                     <NavLink to={`/sinlgeshoppage/${item.id}`}>
-                      <i class="fa-regular fa-eye text-warning-emphasis"></i>
+                      <i className="fa-regular fa-eye text-warning-emphasis"></i>
                     </NavLink>
                   </p>
 
@@ -74,7 +81,7 @@ export default function ShopPage() {
                         addToCart(item);
                       }}
                     >
-                      <i class="fa-solid fa-cart-arrow-down text-warning-emphasis"></i>
+                      <i className="fa-solid fa-cart-arrow-down text-warning-emphasis"></i>
                     </button>
                   </p>
                 </div>

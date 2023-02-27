@@ -1,5 +1,5 @@
 .topheader {
-  margin: 20px;
+  padding: 10px;
   color: #414040 !important ;
   font-size: 18px;
 }
@@ -14,4 +14,14 @@
 }
 .contactemail:hover span {
   color: #b68c5a;
+}
+
+.header_social_icon{
+  color: #6c757d;
+  background-color: #eef0f0;
+}
+
+.header_social_icon:hover{
+  background-color: #c39f57;
+  color: #fff;
 }

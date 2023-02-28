@@ -1,0 +1,12 @@
+.google_btn {
+  border-color: #b68c5a !important;
+}
+
+.google_btn:hover {
+  background-color: #b68c5a;
+  color: #fff !important;
+}
+
+.active {
+  color: #b68c5a !important;
+}

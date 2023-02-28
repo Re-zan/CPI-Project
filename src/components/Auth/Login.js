@@ -12,6 +12,8 @@ import TopMenu from "../Topmenubar/TopMenu";
 import Topsearch from "../Topsearchbar/Topsearch";
 import Mainnavbarpart from "../Mainnavbar/Mainnavbarpart";
 import { Col, Container, Row } from "react-bootstrap";
+import "../Auth/style.css";
+import FooterPart from "../Footer/FooterPart";
 
 
 const Login = () => {
@@ -63,60 +65,22 @@ const Login = () => {
             <Col sm={12} md={6} className="m-auto">
               <div className="Contact_section py-5 rounded shadow p-5 bg-body rounded">
                 <div className="Contact_text d-flex justify-content-around mb-5 pb-4 border-bottom">
-                    <div>
-                      <NavLink
-                        to="/login"
-                        className="fw-bolder fs-5"
-                        style={{ color: "#333333" }}
-                      >
-                        LOGIN
-                      </NavLink>
-                    </div>
+                  <div>
+                    <NavLink to="/login" className='fw-bolder fs-5' style={{ color:"#333333" }}>LOGIN</NavLink>
                   </div>
-                  {/* <Form onSubmit={handleSubmit(onSubmit)}>
-                  <Form.Group className="mb-4" controlId="formBasicEmail">
-                    <Form.Label className="fw-normal fs-6">
-                      Email address *
-                    </Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Enter your email address"
-                    />
-                  </Form.Group>
-
-                  <Form.Group className="mb-4" controlId="formBasicPassword">
-                    <Form.Label className="fw-normal fs-6">
-                      Password *
-                    </Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="Enter your email Password"
-                    />
-                  </Form.Group>
-
-                  <Form.Group className="mb-4" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Remember me" />
-                  </Form.Group>
-
-                  <div className="w-25 m-auto text-center">
-                     <Button
-                      className="contact_btn fw-bolder"
-                      type="submit"
-                      style={{ background: " #c39f57" }}
-                    >
-                      LOGIN
-                    </Button> 
+                  <div>
+                    <NavLink to="/register" className='fw-bolder fs-5' style={{ color:"#333333" }}>REGISTER</NavLink>
                   </div>
-                </Form> */}
+                </div>
                   <form onSubmit={handleSubmit(onSubmit)}>
                       <label className="label">
-                        <span className="label-text text-base font-semibold">
-                          Email:{" "}
+                        <span className="label-text text-base font-semibold mb-2">
+                          Email Address*{" "}
                         </span>
                       </label>
                       <input
                         type="email"
-                        placeholder="Enter Your Email"
+                        placeholder="Enter Your Email Address"
                         className="input input-bordered w-full max-w-xs form-control"
                         {...register("email", {
                           required: {
@@ -143,8 +107,8 @@ const Login = () => {
                       </label>
                     <div className=" w-full max-w-xs">
                       <label className="label">
-                        <span className="label-text text-base font-semibold">
-                          Password:{" "}
+                        <span className="label-text text-base font-semibold mb-2">
+                          Password*{" "}
                         </span>
                       </label>
                       <input
@@ -202,29 +166,27 @@ const Login = () => {
                         </Link>
                       </span>
                     </p>
+                    <div className="text-center">
+                    <hr className="solid" />
+                      <button
+                        onClick={() => signInWithGoogle()}
+                        className="btn border text-center shadow google_btn"
+                        style={{ color:"#b68c5a" }}
+                      >
+                        <span>
+                          <img src={google} alt="" />
+                        </span>{" "}
+                        CONTINUE WITH GOOGLE
+                      </button>
+                    </div>
                   </form> 
-                  
-
               </div>
             </Col>
-
-            
-
-            <hr className="solid" />
-            <button
-              onClick={() => signInWithGoogle()}
-              className="btn btn-outline btn-primary"
-            >
-              <span>
-                <img src={google} alt="" />
-              </span>{" "}
-              CONTINUE WITH GOOGLE
-            </button>
           </Row>
         </Container>
       </div>
-      {/* <MainFooter /> */}
-    </>
+      <FooterPart/>
+      </>
   );
 };
 

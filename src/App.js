@@ -11,7 +11,7 @@ import Addtocart from "./pages/AddToCart/Addtocart";
 import WishListPage from "./pages/WishList/WishListPage";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
-import MainLogin from "./components/Login/MainLogin";
+import RequireAuth from "../src/components/Auth/RequireAuth";
 
 function App() {
   return (
@@ -21,13 +21,12 @@ function App() {
         <Route path="/about" element={<AboutPage />}></Route>
         <Route path="/shop" element={<Shop />}></Route>
         <Route path="/wishlist" element={<WishListPage />}></Route>
-        <Route path="/addtocart" element={<Addtocart />}></Route>
+        <Route path="/addtocart" element={<RequireAuth> <Addtocart /> </RequireAuth>}> </Route>
         <Route path="/sinlgeshoppage/:id" element={<SingleProduct />}></Route>
         <Route path="/blog" element={<BlogPage />}></Route>
-        <Route path="/singleblog/:id" element={<SingleBlogPart />}></Route>
+        <Route path="/singleblog/:id" element={<RequireAuth><SingleBlogPart /></RequireAuth>}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        {/* <Route path="/login" element={<MainLogin />}></Route> */}
         <Route path="/register" element={<Register />}></Route>
       </Routes>
     </BrowserRouter>

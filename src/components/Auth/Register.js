@@ -5,13 +5,15 @@ import {
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import auth from "../../Firebase.init";
 import google from "../../assets/images/google.png";
 import Loading from "../Loading/Loading";
 import TopMenu from "../Topmenubar/TopMenu";
 import Topsearch from "../Topsearchbar/Topsearch";
 import Mainnavbarpart from "../Mainnavbar/Mainnavbarpart";
+import { Col, Container, Row } from "react-bootstrap";
+import FooterPart from "../Footer/FooterPart";
 
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -54,21 +56,29 @@ const Register = () => {
       <TopMenu />
       <Topsearch />
       <Mainnavbarpart />
-      <div className="d-flex border  justify-content-center align-items-center p-5" style={{ background: "#eef0f0" }}>
-        <div className="card w-50  shadow-xl ">
-          <div className="card-body ">
-            <h2 className="text-center mb-5">Register</h2>
-
-            <form onSubmit={handleSubmit(onSubmit)}>
+      <div style={{ background: "#eef0f0" }} className="py-5">
+        <Container>
+          <Row>
+          <Col sm={12} md={6} className="m-auto">
+            <div className="Contact_section py-5 rounded shadow p-5 bg-body rounded">
+              <div className="Contact_text d-flex justify-content-around mb-5 pb-4 border-bottom">
+                  <div>
+                    <NavLink to="/login" className='fw-bolder fs-5' style={{ color:"#333333" }}>LOGIN</NavLink>
+                  </div>
+                  <div>
+                    <NavLink to="/register" className='fw-bolder fs-5' style={{ color:"#333333" }}>REGISTER</NavLink>
+                  </div>
+                </div>
+                <form onSubmit={handleSubmit(onSubmit)}>
               <div className=" w-full max-w-xs mb-2">
                 <label className="label">
                   <span className="label-text text-base font-semibold">
-                    Name:{" "}
+                    Full Name*{" "}
                   </span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Your name"
+                  placeholder="Enter Your Full Name"
                   className="input input-bordered w-full max-w-xs form-control"
                   {...register("name", {
                     required: {
@@ -88,12 +98,12 @@ const Register = () => {
               <div className=" w-full max-w-xs mb-2">
                 <label className="label">
                   <span className="label-text text-base font-semibold">
-                    Email:{" "}
+                    Email Address*{" "}
                   </span>
                 </label>
                 <input
                   type="email"
-                  placeholder="Enter Your Email"
+                  placeholder="Enter Your Email Address"
                   className="input input-bordered w-full max-w-xs form-control"
                   {...register("email", {
                     required: {
@@ -122,7 +132,7 @@ const Register = () => {
               <div className=" w-full max-w-xs mb-2">
                 <label className="label">
                   <span className="label-text text-base font-semibold">
-                    Password:{" "}
+                    Password*{" "}
                   </span>
                 </label>
                 <input
@@ -180,23 +190,27 @@ const Register = () => {
                   </Link>
                 </span>
               </p>
+              <div className="text-center">
+              <hr className="solid" />
+                <button
+                  onClick={() => signInWithGoogle()}
+                  className="btn border text-center shadow google_btn"
+                  style={{ color:"#b68c5a" }}
+                >
+                  <span>
+                    <img src={google} alt="" />
+                  </span>{" "}
+                  CONTINUE WITH GOOGLE
+                </button>
+              </div>
             </form>
-
-            <hr className="solid" />
-            <button
-              onClick={() => signInWithGoogle()}
-              className="btn btn-primary"
-            >
-              <span>
-                <img src={google} alt="" />
-              </span>{" "}
-              CONTINUE WITH GOOGLE
-            </button>
-          </div>
-        </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
 
-      {/* <MainFooter /> */}
+      <FooterPart/>
     </>
   );
 };

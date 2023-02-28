@@ -8,13 +8,9 @@ import productdata from "../../data/productdata";
 
 
 export default function ShopPage() {
-  const [product, setProduct] = useState([]);
-  useEffect(()=>{
-      fetch("products.json")
-      .then(res=>res.json())
-      .then(data=>setProduct(data))
-  },[]);
 
+
+  const [product, setProduct] = useState(productdata);
 
   const addToCart = (data) => {
     let cartLength = JSON.parse(localStorage.getItem("cartItems"));
@@ -66,14 +62,15 @@ export default function ShopPage() {
                 </div>
                 <div className="overlay ">
                   <p className="border border-secondary-subtle rounded p-1">
-                    <i className="fa-regular fa-heart fa-lg"></i>
+                    <NavLink to="/wishlist">
+                      <i className="fa-regular fa-heart text-dark"></i>
+                    </NavLink>
                   </p>
                   <p className="border border-secondary-subtle rounded p-1">
                     <NavLink to={`/sinlgeshoppage/${item.id}`}>
-                      <i className="fa-regular fa-eye text-warning-emphasis"></i>
+                      <i className="fa-regular fa-eye text-dark"></i>
                     </NavLink>
                   </p>
-
                   <p className="border border-secondary-subtle rounded p-1">
                     <button
                       className="btn border-0 p-0"
@@ -81,7 +78,7 @@ export default function ShopPage() {
                         addToCart(item);
                       }}
                     >
-                      <i className="fa-solid fa-cart-arrow-down text-warning-emphasis"></i>
+                      <i className="fa-solid fa-cart-arrow-down"></i>
                     </button>
                   </p>
                 </div>

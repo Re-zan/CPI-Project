@@ -1,8 +1,17 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import Container from "react-bootstrap/Container";
-import { NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, NavLink } from "react-router-dom";
+import auth from "../../Firebase.init";
 import "./TopMenu.css";
 export default function TopMenu() {
+  const [user] = useAuthState(auth);
+
+    const logOut = () => {
+        signOut(auth);
+        localStorage.removeItem("accessToken")
+    };
   return (
     <>
       <div className="topheader border-bottom py-4">
@@ -27,12 +36,18 @@ export default function TopMenu() {
               </NavLink>{" "}
             </div>
 
-            <div className="contactemail">
-              {" "}
+            <div className="">
+            {
+              user
+              ?
+              <NavLink to="/login" onClick={logOut}>
+                <span className="text-dark">SingOut</span>
+              </NavLink>
+              :
               <NavLink to="/login">
-                {" "}
-                <span className="text-dark">Login</span>{" "}
-              </NavLink>{" "}
+              <span className="text-dark">Login</span>
+            </NavLink>
+            }
               /{" "}
               <NavLink to="/register">
                 <span className="text-dark">Register</span>

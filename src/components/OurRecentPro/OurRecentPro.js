@@ -7,6 +7,7 @@ import product1 from "./images/product-5.webp";
 import product2 from "./images/product-2.webp";
 import product3 from "./images/product-3.webp";
 import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 export default function OurRecentPro() {
   return (
@@ -22,10 +23,7 @@ export default function OurRecentPro() {
                     src={product1}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -38,10 +36,7 @@ export default function OurRecentPro() {
                     src={product2}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                 <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -53,10 +48,7 @@ export default function OurRecentPro() {
                     src={product3}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                  <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -73,10 +65,7 @@ export default function OurRecentPro() {
                     src={product1}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -89,10 +78,7 @@ export default function OurRecentPro() {
                     src={product2}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                 <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -104,10 +90,7 @@ export default function OurRecentPro() {
                     src={product3}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                  <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -124,10 +107,7 @@ export default function OurRecentPro() {
                     src={product1}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -140,10 +120,7 @@ export default function OurRecentPro() {
                     src={product2}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                 <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
@@ -155,15 +132,13 @@ export default function OurRecentPro() {
                     src={product3}
                     alt="Third slide"
                   />
-                  <h2 className="m-4 p-2 text-warning-emphasis">
-                    {" "}
-                    Mens Sharwani{" "}
-                  </h2>
+                  <Button to="/shop" className="btn_pro">SHOP NOW</Button>
                 </div>
               </NavLink>
             </Col>
           </Row>
         </Carousel.Item>
+        
       </Carousel>
     </div>
   );

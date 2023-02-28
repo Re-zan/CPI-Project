@@ -1,12 +1,38 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, Navigate, NavLink, useLocation, useNavigate } from "react-router-dom";
 import FooterPart from "../Footer/FooterPart";
 import Mainnavbarpart from "../Mainnavbar/Mainnavbarpart";
 import TopMenu from "../Topmenubar/TopMenu";
 import Topsearch from "../Topsearchbar/Topsearch";
+import { useForm } from 'react-hook-form';
+import auth from "../../Firebase.init";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 
 function MainLogin() {
+  const [showpass, setShowpass] = useState(false);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const { register, formState: { errors }, handleSubmit, getValues } = useForm();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const EmailRef = useRef('');
+    const navigate = useNavigate()
+    let location = useLocation();
+    let signInerror;
+    let from = location.state?.from?.pathname || "/";
+
+
+    
+    const onSubmit = data => {
+      signInWithEmailAndPassword(data.email, data.password);
+      navigate("/");
+  }
   return (
     <>
       <TopMenu />
@@ -28,7 +54,7 @@ function MainLogin() {
                     </NavLink>
                   </div>
                 </div>
-                <Form className="">
+                <Form className="" onSubmit={handleSubmit(onSubmit)}>
                   <Form.Group className="mb-4" controlId="formBasicEmail">
                     <Form.Label className="fw-normal fs-6">
                       Email address *

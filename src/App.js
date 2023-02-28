@@ -9,8 +9,9 @@ import Contact from "./pages/Contact/Contact";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import Addtocart from "./pages/AddToCart/Addtocart";
 import WishListPage from "./pages/WishList/WishListPage";
+import Register from "./components/Auth/Register";
+import Login from "./components/Auth/Login";
 import MainLogin from "./components/Login/MainLogin";
-import MainRegister from "./components/Register/MainRegister";
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
         <Route path="/blog" element={<BlogPage />}></Route>
         <Route path="/singleblog/:id" element={<SingleBlogPart />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/login" element={<MainLogin />}></Route>
-        <Route path="/register" element={<MainRegister />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        {/* <Route path="/login" element={<MainLogin />}></Route> */}
+        <Route path="/register" element={<Register />}></Route>
       </Routes>
     </BrowserRouter>
   );

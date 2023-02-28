@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import "./Mainnavbarpart.css";
 
 export default function Mainnavbarpart() {
+  
   return (
     <>
       <Navbar expand="lg" className="py-3">

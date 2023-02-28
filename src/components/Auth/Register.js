@@ -7,10 +7,11 @@ import {
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../Firebase.init";
+import google from "../../assets/images/google.png";
 import Loading from "../Loading/Loading";
-import google from "../../data/blogdata/images/google.png";
-import MainNavber from "../Navber/MainNavber";
-import MainFooter from "../Footer/MainFooter";
+import TopMenu from "../Topmenubar/TopMenu";
+import Topsearch from "../Topsearchbar/Topsearch";
+import Mainnavbarpart from "../Mainnavbar/Mainnavbarpart";
 
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -50,15 +51,16 @@ const Register = () => {
 
   return (
     <>
-      <MainNavber />
-
-      <div className="d-flex h-screen justify-content-center align-items-center p-20">
-        <div className="card w-96 bg-secondary shadow-xl">
-          <div className="card-body">
+      <TopMenu />
+      <Topsearch />
+      <Mainnavbarpart />
+      <div className="d-flex border  justify-content-center align-items-center p-5" style={{ background: "#eef0f0" }}>
+        <div className="card w-50  shadow-xl ">
+          <div className="card-body ">
             <h2 className="text-center mb-5">Register</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="form-control w-full max-w-xs mb-2">
+              <div className=" w-full max-w-xs mb-2">
                 <label className="label">
                   <span className="label-text text-base font-semibold">
                     Name:{" "}
@@ -67,7 +69,7 @@ const Register = () => {
                 <input
                   type="text"
                   placeholder="Enter Your name"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full max-w-xs form-control"
                   {...register("name", {
                     required: {
                       value: true,
@@ -83,7 +85,7 @@ const Register = () => {
                   )}
                 </label>
               </div>
-              <div className="form-control w-full max-w-xs mb-2">
+              <div className=" w-full max-w-xs mb-2">
                 <label className="label">
                   <span className="label-text text-base font-semibold">
                     Email:{" "}
@@ -92,7 +94,7 @@ const Register = () => {
                 <input
                   type="email"
                   placeholder="Enter Your Email"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full max-w-xs form-control"
                   {...register("email", {
                     required: {
                       value: true,
@@ -117,7 +119,7 @@ const Register = () => {
                   )}
                 </label>
               </div>
-              <div className="form-control w-full max-w-xs mb-2">
+              <div className=" w-full max-w-xs mb-2">
                 <label className="label">
                   <span className="label-text text-base font-semibold">
                     Password:{" "}
@@ -126,7 +128,7 @@ const Register = () => {
                 <input
                   type={showpass ? "text" : "password"}
                   placeholder="Enter Your Password"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full max-w-xs form-control"
                   {...register("password", {
                     required: {
                       value: true,
@@ -161,9 +163,10 @@ const Register = () => {
               {signInerror}
               <div className="d-flex mt-3 justify-content-center align-items-center">
                 <input
+                style={{ background:"#b68c5a" }}
                   type="submit"
                   value="Register"
-                  className="grid btn bg-primary rounded-box place-items-center input input-bordered w-full max-w-xs"
+                  className="grid btn text-white rounded-box place-items-center input input-bordered w-full max-w-xs"
                 />
               </div>
               <p className="m-3">
@@ -193,7 +196,7 @@ const Register = () => {
         </div>
       </div>
 
-      <MainFooter />
+      {/* <MainFooter /> */}
     </>
   );
 };

@@ -4,12 +4,15 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Form, Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase.init";
 import Loading from "../Loading/Loading";
-import google from "../../data/blogdata/images/google.png";
-import MainNavber from "../Navber/MainNavber";
-import MainFooter from "../Footer/MainFooter";
+import google from "../../assets/images/google.png";
+import TopMenu from "../Topmenubar/TopMenu";
+import Topsearch from "../Topsearchbar/Topsearch";
+import Mainnavbarpart from "../Mainnavbar/Mainnavbarpart";
+import { Col, Container, Row } from "react-bootstrap";
+
 
 const Login = () => {
     const [showpass, setShowpass] = useState(false);
@@ -38,7 +41,7 @@ const Login = () => {
     }
 
     if (gError || error) {
-        signInerror = <p className="text-red-500"><small>{error?.message || gError?.message}</small></p>
+        signInerror = <p className="text-red"><small>{error?.message || gError?.message}</small></p>
     }
 
     const onSubmit = data => {
@@ -50,108 +53,162 @@ const Login = () => {
 
   return (
     <>
-      <MainNavber />
-      <div className="d-flex h-screen my-auto align-self-center justify-content-center align-items-center">
-        <div className="card w-96 bg-secondary shadow-xl">
-          <div className="card-body">
-            <h2 className="text-center mb-5">Login</h2>
+      {/* <MainNavber /> */}
+      <TopMenu />
+      <Topsearch />
+      <Mainnavbarpart />
+      <div style={{ background: "#eef0f0" }} className="py-5">
+        <Container>
+          <Row>
+            <Col sm={12} md={6} className="m-auto">
+              <div className="Contact_section py-5 rounded shadow p-5 bg-body rounded">
+                <div className="Contact_text d-flex justify-content-around mb-5 pb-4 border-bottom">
+                    <div>
+                      <NavLink
+                        to="/login"
+                        className="fw-bolder fs-5"
+                        style={{ color: "#333333" }}
+                      >
+                        LOGIN
+                      </NavLink>
+                    </div>
+                  </div>
+                  {/* <Form onSubmit={handleSubmit(onSubmit)}>
+                  <Form.Group className="mb-4" controlId="formBasicEmail">
+                    <Form.Label className="fw-normal fs-6">
+                      Email address *
+                    </Form.Label>
+                    <Form.Control
+                      type="email"
+                      placeholder="Enter your email address"
+                    />
+                  </Form.Group>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="form-control w-full max-w-xs mb-3">
-                <label className="label">
-                  <span className="label-text text-base font-semibold">
-                    Email:{" "}
-                  </span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  className="input input-bordered w-full max-w-xs"
-                  {...register("email", {
-                    required: {
-                      value: true,
-                      message: "Email is Required",
-                    },
-                    pattern: {
-                      value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                      message: "Please provide a valid email",
-                    },
-                  })}
-                />
-                <label className="label">
-                  {errors.email?.type === "required" && (
-                    <span className="label-text-alt text-danger">
-                      {errors.email.message}
-                    </span>
-                  )}
-                  {errors.email?.type === "pattern" && (
-                    <span className="label-text-alt text-danger">
-                      {errors.email.message}
-                    </span>
-                  )}
-                </label>
+                  <Form.Group className="mb-4" controlId="formBasicPassword">
+                    <Form.Label className="fw-normal fs-6">
+                      Password *
+                    </Form.Label>
+                    <Form.Control
+                      type="password"
+                      placeholder="Enter your email Password"
+                    />
+                  </Form.Group>
+
+                  <Form.Group className="mb-4" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Remember me" />
+                  </Form.Group>
+
+                  <div className="w-25 m-auto text-center">
+                     <Button
+                      className="contact_btn fw-bolder"
+                      type="submit"
+                      style={{ background: " #c39f57" }}
+                    >
+                      LOGIN
+                    </Button> 
+                  </div>
+                </Form> */}
+                  <form onSubmit={handleSubmit(onSubmit)}>
+                      <label className="label">
+                        <span className="label-text text-base font-semibold">
+                          Email:{" "}
+                        </span>
+                      </label>
+                      <input
+                        type="email"
+                        placeholder="Enter Your Email"
+                        className="input input-bordered w-full max-w-xs form-control"
+                        {...register("email", {
+                          required: {
+                            value: true,
+                            message: "Email is Required",
+                          },
+                          pattern: {
+                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                            message: "Please provide a valid email",
+                          },
+                        })}
+                      />
+                      <label className="label">
+                        {errors.email?.type === "required" && (
+                          <span className="label-text-alt text-danger form-control">
+                            {errors.email.message}
+                          </span>
+                        )}
+                        {errors.email?.type === "pattern" && (
+                          <span className="label-text-alt text-danger form-control">
+                            {errors.email.message}
+                          </span>
+                        )}
+                      </label>
+                    <div className=" w-full max-w-xs">
+                      <label className="label">
+                        <span className="label-text text-base font-semibold">
+                          Password:{" "}
+                        </span>
+                      </label>
+                      <input
+                        type={showpass ? "text" : "password"}
+                        placeholder="Enter Your Password"
+                        className="input input-bordered w-full max-w-xs form-control"
+                        {...register("password", {
+                          required: {
+                            value: true,
+                            message: "Password is Required",
+                          },
+                          minLength: {
+                            value: 6,
+                            message: "Must be 6 character or longer",
+                          },
+                        })}
+                      />
+                      <label className="label">
+                        {errors.password?.type === "required" && (
+                          <span className="label-text-alt text-danger">
+                            {errors.password.message}
+                          </span>
+                        )}
+                        {errors.password?.type === "minLength" && (
+                          <span className="label-text-alt text-danger">
+                            {errors.password.message}
+                          </span>
+                        )}
+                      </label>
+                    </div>
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      onClick={() => setShowpass(!showpass)}
+                    />{" "}
+                    <span>See Password</span>
+                    {signInerror}
+                    <div className="d-flex mt-3 justify-content-center align-items-center">
+                      <input
+                      style={{ background:"#b68c5a" }}
+                        type="submit"
+                        value="Login"
+                        className="grid btn text-white rounded-box input input-bordered w-full max-w-xs"
+                      />
+                    </div>
+                    <p className="m-3">
+                      You are new User?
+                      <span>
+                        <Link
+                          to="/register"
+                          className="text-danger ps-1 text-error text-sm cursor-pointer"
+                        >
+                          Create New Account
+                        </Link>
+                      </span>
+                    </p>
+                  </form> 
+                  
+
               </div>
-              <div className="form-control w-full max-w-xs">
-                <label className="label">
-                  <span className="label-text text-base font-semibold">
-                    Password:{" "}
-                  </span>
-                </label>
-                <input
-                  type={showpass ? "text" : "password"}
-                  placeholder="Enter Your Password"
-                  className="input input-bordered w-full max-w-xs"
-                  {...register("password", {
-                    required: {
-                      value: true,
-                      message: "Password is Required",
-                    },
-                    minLength: {
-                      value: 6,
-                      message: "Must be 6 character or longer",
-                    },
-                  })}
-                />
-                <label className="label">
-                  {errors.password?.type === "required" && (
-                    <span className="label-text-alt text-danger">
-                      {errors.password.message}
-                    </span>
-                  )}
-                  {errors.password?.type === "minLength" && (
-                    <span className="label-text-alt text-danger">
-                      {errors.password.message}
-                    </span>
-                  )}
-                </label>
-              </div>
-              <input
-                type="checkbox"
-                name=""
-                id=""
-                onClick={() => setShowpass(!showpass)}
-              />{" "}
-              <span>See Password</span>
-              {signInerror}
-              <div className="d-flex mt-3 justify-content-center align-items-center">
-                <input
-                  type="submit"
-                  value="Login"
-                  className="grid btn bg-primary rounded-box input input-bordered w-full max-w-xs"
-                />
-              </div>
-              <p className="m-3">
-                You are new User?
-                <span>
-                  <Link
-                    to="/register"
-                    className="text-danger ps-1 text-error text-sm cursor-pointer"
-                  >
-                    Create New Account
-                  </Link>
-                </span>
-              </p>
-            </form>
+            </Col>
+
+            
 
             <hr className="solid" />
             <button
@@ -163,10 +220,10 @@ const Login = () => {
               </span>{" "}
               CONTINUE WITH GOOGLE
             </button>
-          </div>
-        </div>
+          </Row>
+        </Container>
       </div>
-      <MainFooter />
+      {/* <MainFooter /> */}
     </>
   );
 };
